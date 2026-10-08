@@ -1,0 +1,7 @@
+src-assets/
+.claude/
+.DS_Store
+shots/
+.claude-claimed
+TRIGGER.md
+.impeccable/
