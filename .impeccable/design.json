@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-08T11:48:11+00:00",
+  "generatedAt": "2026-10-08T12:16:46+00:00",
   "title": "Design System: Hydro-Pro Quote Widget",
   "extensions": {
     "colorMeta": {
@@ -148,6 +148,60 @@
           "#e7effc"
         ]
       },
+      "selection": {
+        "role": "utility",
+        "displayName": "Selection Blue",
+        "canonical": "#cfe0ff",
+        "system": "page",
+        "oneOff": true,
+        "purpose": "One-off: ::selection background with navy text.",
+        "tonalRamp": [
+          "#020a18",
+          "#061d47",
+          "#0a347f",
+          "#0f4dbd",
+          "#2169ed",
+          "#5f93f2",
+          "#a1bff7",
+          "#dee9fc"
+        ]
+      },
+      "focus-ring": {
+        "role": "utility",
+        "displayName": "Focus Ring",
+        "canonical": "#7aa7f7",
+        "system": "page",
+        "oneOff": true,
+        "purpose": "One-off: global page :focus-visible outline, 3px, 2px offset, 6px corner.",
+        "tonalRamp": [
+          "#020a18",
+          "#061d47",
+          "#0a347f",
+          "#0f4ebd",
+          "#216bed",
+          "#5f94f2",
+          "#a1c0f7",
+          "#dee9fc"
+        ]
+      },
+      "wash-fallback": {
+        "role": "utility",
+        "displayName": "Wash Fallback Olive",
+        "canonical": "#6b7458",
+        "system": "page",
+        "oneOff": true,
+        "purpose": "One-off: ground behind the wash canvas before photo and grime load; keeps the frame never-black.",
+        "tonalRamp": [
+          "#0d0e0b",
+          "#282b21",
+          "#484e3b",
+          "#6b7458",
+          "#8d9877",
+          "#adb49c",
+          "#ced3c5",
+          "#eef0eb"
+        ]
+      },
       "hpq-accent": {
         "role": "primary",
         "displayName": "Hydro-Pro Blue (widget)",
@@ -280,7 +334,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Demo page hero headline only; uppercase."
+        "purpose": "Demo page hero headline only; uppercase. clamp(34px,9.6vw,72px): ~34.6px on a 360px phone, 72px at desktop."
       },
       "headline": {
         "displayName": "Headline",
@@ -292,7 +346,7 @@
       },
       "pitch": {
         "displayName": "Pitch",
-        "purpose": "One-line pitch under the hero headline."
+        "purpose": "One-line pitch under the hero headline; 17px on phones, up to 20px."
       },
       "body": {
         "displayName": "Body",
@@ -300,7 +354,15 @@
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Demo page buttons, top-bar tag, panel headings; uppercase tracked."
+        "purpose": "Every demo page button label, 14px at all widths; uppercase tracked."
+      },
+      "tag-phone": {
+        "displayName": "Tag (phone)",
+        "purpose": "Top-bar tag on phones: 11px, 0.1em."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Top-bar tag from 600px: 12px, 0.14em."
       },
       "code": {
         "displayName": "Code",
@@ -320,22 +382,22 @@
       },
       "hpq-button": {
         "displayName": "Widget Button",
-        "purpose": "Widget button labels; uppercase tracked."
+        "purpose": "Widget button labels, 14px; uppercase tracked."
       },
       "hpq-fine": {
         "displayName": "Widget Fine Print",
-        "purpose": "Service area, hours, fallbacks; centered muted."
+        "purpose": "Service area, hours, fallbacks, errors, status; 14px centered muted."
       }
     },
     "shadows": [
       {
         "name": "hero-lift",
-        "value": "0 24px 50px -24px rgba(3,43,116,.45), 0 4px 12px rgba(3,43,116,.12)",
-        "purpose": "Wash canvas."
+        "value": "0 20px 40px -22px rgba(3,43,116,.45), 0 4px 12px rgba(3,43,116,.12)",
+        "purpose": "Wash canvas, all widths."
       },
       {
         "name": "floating-bubble",
-        "value": "0 18px 36px -18px rgba(3,43,116,.5), 0 4px 12px rgba(3,43,116,.12)",
+        "value": "0 14px 30px -16px rgba(3,43,116,.55), 0 3px 10px rgba(3,43,116,.14)",
         "purpose": "Example text bubble over the photo."
       },
       {
@@ -346,7 +408,12 @@
       {
         "name": "pill-hint",
         "value": "0 6px 16px -6px rgba(3,43,116,.35)",
-        "purpose": "\"Drag to wash it\" pill."
+        "purpose": "Wash hint pill."
+      },
+      {
+        "name": "thumb-bar",
+        "value": "0 -12px 26px -18px rgba(3,43,116,.4)",
+        "purpose": "Sticky bottom bar on phones; the only upward shadow."
       },
       {
         "name": "hpq-card",
@@ -357,13 +424,23 @@
         "name": "hpq-focus-glow",
         "value": "0 0 0 3px rgba(13,87,219,.22)",
         "purpose": "Widget field focus."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #7aa7f7; outline-offset: 2px; border-radius: 6px",
+        "purpose": "Global page :focus-visible ring."
       }
     ],
     "motion": [
       {
         "name": "ease-out-soft",
         "value": "cubic-bezier(.2,.8,.2,1)",
-        "purpose": "Page button press and hint exit (.2s / .5s)."
+        "purpose": "Page button press (.2s), hint exit (.5s), sticky bar slide (.35s)."
+      },
+      {
+        "name": "bar-slide",
+        "value": "transform .35s cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Sticky thumb bar in/out; visibility flips after the slide so it leaves the tab order."
       },
       {
         "name": "hpq-state",
@@ -403,23 +480,73 @@
       {
         "name": "SPRAY_PER_FRAME",
         "value": "7",
-        "purpose": "Droplets per frame while washing; halved on phones; cap 600."
+        "purpose": "Droplets per frame while washing; halved under 520px; cap 600."
       }
     ],
     "breakpoints": [
       {
-        "name": "page-stack",
-        "value": "900px"
+        "name": "phone (base)",
+        "value": "360-430px",
+        "purpose": "Unqualified CSS is the phone layout."
       },
       {
-        "name": "page-phone",
-        "value": "520px"
+        "name": "page-tablet",
+        "value": "min-width: 600px"
       },
       {
-        "name": "hpq-phone",
-        "value": "480px"
+        "name": "page-desktop",
+        "value": "min-width: 900px"
+      },
+      {
+        "name": "hpq-wide",
+        "value": "min-width: 481px",
+        "purpose": "Widget only; phone-first base below it."
+      },
+      {
+        "name": "wash-spray-small",
+        "value": "max-width: 520px",
+        "purpose": "Script-only: halves spray density."
       }
-    ]
+    ],
+    "grimePalette": {
+      "note": "Canvas-only depicted dirt; never CSS, never UI color.",
+      "base": "rgba(92,88,70,.82)",
+      "blotchTones": [
+        "rgb(70,78,46)",
+        "rgb(112,108,84)",
+        "rgb(52,58,40)",
+        "rgb(124,126,92)",
+        "rgb(96,84,58)"
+      ],
+      "dripStreak": "rgb(44,50,32) at .12-.32 alpha",
+      "speckles": [
+        "rgba(40,44,30,.35)",
+        "rgba(150,150,120,.22)"
+      ],
+      "spray": [
+        "#ffffff",
+        "#e9f3ff"
+      ]
+    },
+    "mimicry": {
+      "note": "Messaging-app mimicry in the phone preview and example bubble; copies the phone Messages app, not this palette. Do not reuse in page or widget UI.",
+      "colors": {
+        "received-bubble": "#e9e9eb",
+        "bubble-text": "#111111",
+        "bubble-placeholder": "#9aa1ab",
+        "thread-header": "#f6f7f9",
+        "thread-rule": "#e9ecf1",
+        "contact-name": "#222222",
+        "secondary-grey": "#6b7380",
+        "timestamp": "#8a919c",
+        "avatar": "#b9c3d3",
+        "device-bezel": "#dfe6f1"
+      },
+      "shapes": {
+        "bubble-tail": "16px 16px 16px 6px (example, phone); 18px 18px 18px 6px (example from 900px, preview bubble)",
+        "device": "44px outer, 34px screen"
+      }
+    }
   },
   "components": [
     {
@@ -428,7 +555,7 @@
       "refersTo": "button-primary",
       "description": "Filled pill CTA on the demo page; always paired with a ghost button.",
       "html": "<a class=\"ds-btn-primary\" href=\"#\">Try the widget</a>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid #0d57db;font:700 13px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:#0d57db;color:#fff} .ds-btn-primary:hover{background:#073fa3;border-color:#073fa3} .ds-btn-primary:active{transform:scale(.97)} .ds-btn-primary:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid #0d57db;font:700 14px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:#0d57db;color:#fff} @media (hover:hover){.ds-btn-primary:hover{background:#073fa3;border-color:#073fa3}} .ds-btn-primary:active{transform:scale(.97)} .ds-btn-primary:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
     },
     {
       "name": "Page Ghost Button",
@@ -436,22 +563,39 @@
       "refersTo": "button-ghost",
       "description": "Outlined pill, the second half of every button pair.",
       "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the embed code</a>",
-      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid #0d57db;font:700 13px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:transparent;color:#0d57db} .ds-btn-ghost:hover{background:#e8f0fd} .ds-btn-ghost:active{transform:scale(.97)} .ds-btn-ghost:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid #0d57db;font:700 14px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:transparent;color:#0d57db} @media (hover:hover){.ds-btn-ghost:hover{background:#e8f0fd}} .ds-btn-ghost:active{transform:scale(.97)} .ds-btn-ghost:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
+    },
+    {
+      "name": "Sticky Thumb Bar",
+      "kind": "nav",
+      "refersTo": "sticky-bar",
+      "description": "Phones only: fixed bottom bar with the button pair, shown once the hero buttons scroll away and hidden while the widget is on screen.",
+      "html": "<nav class=\"ds-bar\"><a class=\"ds-bar-p\" href=\"#\">Get a fast quote</a><a class=\"ds-bar-g\" href=\"#\">Text</a></nav>",
+      "css": ".ds-bar{display:flex;gap:10px;max-width:400px;padding:10px 16px 10px;background:rgba(255,255,255,.97);border-top:1px solid #dfe4ec;box-shadow:0 -12px 26px -18px rgba(3,43,116,.4);font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-bar a{display:inline-flex;align-items:center;justify-content:center;min-height:56px;border-radius:999px;border:2px solid #0d57db;font:700 14px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none} .ds-bar-p{flex:1;padding:0 24px;background:#0d57db;color:#fff} .ds-bar-g{flex:0 0 auto;padding:0 20px;background:transparent;color:#0d57db}"
     },
     {
       "name": "Embed Card",
       "kind": "card",
-      "refersTo": "card-way",
-      "description": "Flat paper card with a hairline; holds steps, a code block and a button.",
+      "refersTo": "card-way-phone",
+      "description": "Flat paper card with a hairline; 22px/18px padding on phones, 28px from 600px.",
       "html": "<div class=\"ds-way\"><h3>Paste it in<span class=\"ds-best\">Easiest</span></h3><ol><li>Click Copy widget code.</li><li>In GoDaddy: Edit Website, Add Section, HTML.</li></ol><pre class=\"ds-pre\">&lt;div id=\"hpq-block\"&gt;…&lt;/div&gt;</pre></div>",
-      "css": ".ds-way{background:#fff;border:1px solid #dfe4ec;border-radius:16px;padding:28px;font:16px/1.55 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#1f2733} .ds-way h3{margin:0 0 6px;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:#032b74} .ds-best{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:#e8f0fd;color:#0d57db;font-size:11px;letter-spacing:.08em;vertical-align:3px} .ds-way ol{margin:12px 0 20px;padding-left:20px;color:#4a5463} .ds-pre{margin:0;padding:16px;border-radius:12px;background:#eef3fb;color:#032b74;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap}"
+      "css": ".ds-way{background:#fff;border:1px solid #dfe4ec;border-radius:16px;padding:22px 18px;font:16px/1.55 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#1f2733} .ds-way h3{margin:0 0 6px;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:#032b74} .ds-best{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:#e8f0fd;color:#0d57db;font-size:11px;letter-spacing:.08em;vertical-align:3px} .ds-way ol{margin:12px 0 20px;padding-left:20px;color:#4a5463} .ds-pre{margin:0;padding:14px;border-radius:12px;background:#eef3fb;color:#032b74;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap}"
     },
     {
       "name": "Top Bar",
       "kind": "nav",
-      "description": "Paper bar with hairline, logo left, tracked tag right; no links.",
+      "description": "Paper bar with hairline, logo left, tracked tag right; 58px on phones, 72px from 600px; no links.",
       "html": "<header class=\"ds-top\"><b class=\"ds-logo\">HYDRO-PRO</b><span class=\"ds-tag\">Quote widget · demo</span></header>",
-      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:0 20px;background:#fff;border-bottom:1px solid #dfe4ec;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-logo{color:#0d57db;font-weight:800;font-size:20px} .ds-tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4a5463}"
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:58px;padding:0 20px;background:#fff;border-bottom:1px solid #dfe4ec;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-logo{color:#0d57db;font-weight:800;font-size:20px} .ds-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4a5463}",
+      "refersTo": "top-bar-phone"
+    },
+    {
+      "name": "Widget Card (phone)",
+      "kind": "card",
+      "refersTo": "hpq-card-phone",
+      "description": "Widget shell at phone width: 14px radius, 22px/18px padding; 16px and 28px from 481px.",
+      "html": "<div class=\"ds-hpq-card\"><h2>Get a fast quote</h2><p>We text you back the same day.</p></div>",
+      "css": ".ds-hpq-card{max-width:360px;padding:22px 18px;background:#fff;border:1px solid #dadada;border-radius:14px;box-shadow:0 18px 40px -26px rgba(27,27,27,.35);font:16px/1.5 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#303030} .ds-hpq-card h2{margin:0 0 4px;font:700 24px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:0;text-transform:none} .ds-hpq-card p{margin:0;font-size:15px;color:#5e5e5e}"
     },
     {
       "name": "Widget Send Button",
@@ -459,7 +603,7 @@
       "refersTo": "hpq-send",
       "description": "Full-width filled pill that opens the prefilled SMS.",
       "html": "<button class=\"ds-hpq-send\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z\"/></svg>Text my quote request</button>",
-      "css": ".ds-hpq-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 13px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:#0d57db;color:#fff} .ds-hpq-send:hover{background:#073fa3;border-color:#073fa3} .ds-hpq-send:active{transform:scale(.98)} .ds-hpq-send:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
+      "css": ".ds-hpq-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 14px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:#0d57db;color:#fff} @media (hover:hover){.ds-hpq-send:hover{background:#073fa3;border-color:#073fa3}} .ds-hpq-send:active{transform:scale(.98)} .ds-hpq-send:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
     },
     {
       "name": "Widget Alt Button",
@@ -467,7 +611,7 @@
       "refersTo": "hpq-alt",
       "description": "Outlined pill fallback (\"Text us instead\", \"Copy the message\").",
       "html": "<a class=\"ds-hpq-alt\" href=\"#\">Text us instead</a>",
-      "css": ".ds-hpq-alt{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 13px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:transparent;color:#0d57db;text-decoration:none} .ds-hpq-alt:hover{background:rgba(13,87,219,.07)} .ds-hpq-alt:active{transform:scale(.98)} .ds-hpq-alt:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
+      "css": ".ds-hpq-alt{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 14px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:transparent;color:#0d57db;text-decoration:none} @media (hover:hover){.ds-hpq-alt:hover{background:rgba(13,87,219,.07)}} .ds-hpq-alt:active{transform:scale(.98)} .ds-hpq-alt:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
     },
     {
       "name": "Widget Field",
@@ -488,17 +632,19 @@
     {
       "name": "Wash Canvas",
       "kind": "custom",
-      "description": "Signature: the owner's photo under olive grime with a clean diagonal stripe; drag to wash (static snapshot here).",
-      "html": "<div class=\"ds-wash\"><div class=\"ds-grime\"></div><span class=\"ds-hint\">Drag to wash it</span></div>",
-      "css": ".ds-wash{position:relative;aspect-ratio:4/3;max-width:420px;border-radius:22px;overflow:hidden;background:linear-gradient(160deg,#cfe0f5,#f4f7fb 60%,#c9d3c0);box-shadow:0 24px 50px -24px rgba(3,43,116,.45),0 4px 12px rgba(3,43,116,.12);cursor:crosshair;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-grime{position:absolute;inset:0;background:rgba(92,88,70,.82);-webkit-mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%);mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%)} .ds-hint{position:absolute;left:14px;bottom:14px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.92);color:#032b74;font-size:13px;font-weight:700;box-shadow:0 6px 16px -6px rgba(3,43,116,.35)}"
+      "description": "Signature: the owner's photo under olive grime with a clean diagonal stripe; 16:10 / 18px on phones (shown), 4:3 / 22px from 600px. Static snapshot.",
+      "html": "<div class=\"ds-wash\"><div class=\"ds-grime\"></div><span class=\"ds-hint\">Swipe across to wash it</span></div>",
+      "css": ".ds-wash{position:relative;aspect-ratio:16/10;max-width:400px;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#cfe0f5,#f4f7fb 60%,#c9d3c0),#6b7458;box-shadow:0 20px 40px -22px rgba(3,43,116,.45),0 4px 12px rgba(3,43,116,.12);cursor:crosshair;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-grime{position:absolute;inset:0;background:rgba(92,88,70,.82);-webkit-mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%);mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%)} .ds-hint{position:absolute;left:10px;top:10px;padding:8px 13px 8px 11px;border-radius:999px;background:rgba(255,255,255,.92);color:#032b74;font-size:13px;font-weight:700;letter-spacing:.02em;box-shadow:0 6px 16px -6px rgba(3,43,116,.35)}",
+      "refersTo": "wash-phone"
     }
   ],
   "narrative": {
     "northStar": "The Clean Stripe",
-    "overview": "**Creative North Star: \"The Clean Stripe\"**\n\nTwo systems share one file and must stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is a guest on someone else's website: it borrows hydropronj.com's language (their blue, a white card, pill buttons, uppercase tracked labels, Open Sans when the host has it) and adds nothing of its own. It is neutral and still, so it reads as if it was always part of their GoDaddy site. The **demo page** around it is the pitch to the owner: the same blue, pushed louder, with heavy uppercase headlines and one physical idea from the trade, a grimy surface coming clean under a pressure-wash stripe, on the owner's own hero photo.\n\nThe page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash; the widget only changes state.",
+    "overview": "**Creative North Star: \"The Clean Stripe\"**\n\nTwo systems share one file and must stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is a guest on someone else's website: it borrows hydropronj.com's language (their blue, a white card, pill buttons, uppercase tracked labels, Open Sans when the host has it) and adds nothing of its own. It is neutral and still, so it reads as if it was always part of their GoDaddy site. The **demo page** around it is the pitch to the owner: the same blue, pushed louder, with heavy uppercase headlines and one physical idea from the trade, a grimy surface coming clean under a pressure-wash stripe, on the owner's own hero photo.\n\nBoth systems are built phone first. The base styles are the 360–430px layout and every larger size is an adaptation layered on top, because the owner will open the pitch on a phone and his customers will fill the widget on one. Phone values in this file are the primary steps of each scale; tablet and desktop values come second.\n\nThe page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash and the sticky thumb bar; the widget only changes state.",
     "keyCharacteristics": [
+      "Phone first: base CSS is the phone layout; `min-width` queries adapt up.",
       "One hue (Hydro-Pro blue `#0d57db`) across both systems; everything else is neutral.",
-      "Pill buttons in matched pairs: filled primary, outlined ghost, same height, same 2px outline.",
+      "Pill buttons in matched pairs: filled primary, outlined ghost, same 56px height, same 2px outline.",
       "Uppercase tracked labels name fields, buttons and panels.",
       "Page headlines shout (800, uppercase, tight tracking); widget headings stay sentence case.",
       "Ground is never black.",
@@ -507,12 +653,12 @@
     "rules": [
       {
         "name": "The Never-Black Ground Rule",
-        "body": "The page ground is never black. Body sits on `ground`, bands on `paper`; the darkest surface anywhere is Harbor Navy in the footer. No `#000` or near-black section, card, or overlay; even the wash canvas fallback is grime olive (`#6b7458`), not black.",
+        "body": "The page ground is never black. Body sits on `ground`, bands on `paper`; the darkest surface anywhere is Harbor Navy in the footer. No `#000` or near-black section, card, or overlay; even the wash canvas fallback is grime olive, not black.",
         "section": "colors"
       },
       {
         "name": "The One Blue Rule",
-        "body": "Blue is the only hue in either system. The page climbs a three-step ladder (blue at rest, pressed blue on hover, navy for type and the footer); the widget uses only the first two. No second accent.",
+        "body": "Blue is the only hue in either system. The page climbs a three-step ladder (blue at rest, pressed blue on hover, navy for type and the footer); the widget uses only the first two. No second accent. Grime olive and messaging greys are depicted materials, not accents.",
         "section": "colors"
       },
       {
@@ -531,26 +677,38 @@
         "section": "typography"
       },
       {
+        "name": "The Thumb-Size Text Rule",
+        "body": "Interactive text is 14px or larger on phones: button labels, fine print, links and status lines. Only labels that name a field (12px) and messaging-app mimicry go smaller.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phone Is The Base Rule",
+        "body": "Write the phone layout as the unqualified CSS and adapt upward with `min-width` queries. A desktop rule undone by a `max-width` query is a regression.",
+        "section": "layout"
+      },
+      {
         "name": "The Tinted Lift Rule",
-        "body": "Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone). Cards and sections use hairlines.",
+        "body": "Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone, the thumb bar). Cards and sections use hairlines.",
         "section": "elevation"
       }
     ],
     "dos": [
+      "**Do** write phone styles as the base and adapt up with `min-width` (600px, 900px; 481px inside the widget).",
       "**Do** keep the page ground at Mist Ground and the darkest surface at Harbor Navy; the ground is never black.",
       "**Do** scope every widget selector under `#hpq-block` and route every widget color through a `--hpq-*` variable, so a restyle is a variable edit.",
-      "**Do** ship buttons as pairs: same height, same 2px outline, filled primary beside outlined ghost.",
+      "**Do** ship buttons as pairs: same 56px height, same 2px outline, filled primary beside outlined ghost.",
+      "**Do** gate hover styles behind `@media (hover:hover)`.",
       "**Do** set page headings in 800 uppercase with negative tracking and widget headings in 700 sentence case.",
-      "**Do** keep widget field text at 16px or larger.",
+      "**Do** keep widget field text at 16px or larger and interactive text at 14px or larger.",
       "**Do** tint page shadows navy with negative spread, and only on elements that float.",
       "**Do** run the wash over the client's own photo and tune it through the named constants, not by editing the loop.",
-      "**Do** keep field strokes at 3:1 or better against the card; the shipped `hpq-line` is `#949494` (about 3:1 on white); don't lighten it."
+      "**Do** keep field strokes at 3:1 or better against the card; the shipped `hpq-line` sits at that floor, so don't lighten it."
     ],
     "donts": [
       "**Don't** put a black or near-black ground behind any section, card, or overlay.",
       "**Don't** animate anything inside the widget beyond 0.15s state transitions and the press scale; all motion belongs to the demo page.",
       "**Don't** reference demo-page tokens or load fonts or assets from inside `#hpq-block`; it must paste into GoDaddy whole.",
-      "**Don't** add a second accent hue to either system.",
+      "**Don't** add a second accent hue to either system, and don't borrow the grime olives or the messaging greys as UI color.",
       "**Don't** place a tracked uppercase line above a headline as a kicker; tracked labels name things.",
       "**Don't** use grey or black drop shadows on the page, or hard offset shadows anywhere.",
       "**Don't** run the wash over stock or generated house imagery."
