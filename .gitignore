@@ -4,4 +4,4 @@ src-assets/
 shots/
 .claude-claimed
 TRIGGER.md
-.impeccable/
+.impeccable/hook.cache.json
