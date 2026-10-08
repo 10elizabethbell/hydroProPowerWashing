@@ -1,6 +1,6 @@
 # Hydro-Pro Power Washing — handoff at ~60%
 
-**Live file:** index.html · **Repo:** https://github.com/10elizabethbell/hydroProPowerWashing (private; created before the public-repo rule. `brief.md` was committed in the first two commits and is now untracked, so it's still in history) · **Built:** 2026-10-08 from Muse brief (BRIEF.md, 2026-10-08)
+**Live file:** index.html · **Repo:** https://github.com/10elizabethbell/hydroProPowerWashing (private; created before the public-repo rule. `brief.md` was committed in 04a4b72 and untracked in 50eb655, so it is still in history; raw `src-assets/` was never committed) · **Built:** 2026-10-08 from Muse brief (BRIEF.md, 2026-10-08)
 
 ## What's built
 - **The widget** (`#hpq-block`, between `HPQ:BEGIN` / `HPQ:END`): service dropdown (all 15 of their services in their wording, grouped "This season / Washing / Restoration / Other", plus "Something else / not sure"), name, phone, address, preferred day (Flexible + next 5 weekdays), optional details. Submit validates inline, then opens an SMS to +17322885941 with everything prefilled (`sms:+17322885941?&body=…`). A "your text is ready" state follows with Open again / Copy message / email-it fallbacks for desktops. "Text us instead" button is a plain `sms:` link. Self-contained: its own `<style>` (all selectors scoped under `#hpq-block`, colors in `--hpq-*` vars) and `<script>` IIFE. No network, no tracking.
