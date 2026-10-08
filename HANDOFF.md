@@ -7,6 +7,7 @@
 - **Neutral look** matched to their GoDaddy site: their blue `#0d57db`, white card, pill buttons with uppercase tracked labels, Open Sans if present.
 - **Embed:** instructions in the comment at the top of the file. Option A (paste the block into a GoDaddy HTML section) has a "Copy widget code" button that copies the pristine block (`window.HPQ_SOURCE`). Option B: `?embed` shows only the widget, for an iframe.
 - **Demo page around it (the pitch):** benefit headline to the owner ("Quotes that text you."), their logo, and the signature element: **their own hero photo under a layer of grime that you pressure-wash clean** by dragging (mouse or finger), with spray droplets; an idle wand keeps washing on its own and the grime slowly creeps back. Beside the widget, a phone mock shows the exact text the owner would receive, updating as you type.
+- An "Example request" text bubble overlaps the photo's corner so the first screen shows the product (sample data, no real address).
 - Footer with their details and "Demo one-pager — free sample."
 
 ## Assumptions I made
@@ -18,7 +19,7 @@
 - The widget's text is customer-initiated SMS, so no consent checkbox; their existing form's consent line is about Hydro-Pro texting customers.
 
 ## Placeholders and gaps
-- Option B iframe URL is `https://example.com/quote.html?embed`: needs a real host if they go that route.
+- Option B iframe URL is `https://example.com/quote.html?embed`: needs a real host if they go that route. The frame code includes a one-line listener; the `?embed` page posts its height (on resize, input, click, submit), so the frame grows for error messages and the sent panel (tested headless: 997px → 1105px).
 - No real before/after pairs were in the brief; the wash effect is a generated grime layer over their clean photo, not a real before.
 - Muse revised the brief mid-build (brief.md, 07:38; same file as BRIEF.md on macOS). Changes picked up: texts confirmed, Ocean & Monmouth Counties, "Free estimates" and "Family owned & operated" wording. Not used yet, see Ideas.
 - Brief says "no logo found" and "colors unknown": I pulled the logo (`hydropro.png`) and blue `#0d57db` straight from hydropronj.com.
@@ -33,7 +34,13 @@
 - Want a photo upload? (Their current form allows attachments; SMS links can't carry files. Could add "text us a photo after" wording.)
 - Where on the site should it go: replacing the current "Get a Free Quote" form, or beside it?
 
+## Review round (done once)
+Finish reviewer fixes applied: frame auto-height, error text linked via `aria-describedby` only once a field is invalid, `role="img"` on the wash, phone copy says "just below the form", shorter empty phone mock on phones, half-washed opening state with grey-brown grime, example bubble in the hero, and sent-state copy that no longer claims Messages is already open (it says "Tap Open in Messages"). Its other notes: no seeded concept roll was run for the direction (code-led build); and the water lives only in the hero, while your taste file asks for wave dividers carrying the motion through the page. Both are yours to decide.
+On phones the "Your photo, hydropronj.com" caption is hidden so the drag hint and example bubble don't collide.
+
 ## Ideas not built (yours to pick)
+- Animated water/spray dividers between sections (carry the wash motion past the hero).
+- Preview bubble "arrives" like a sent text (slide + delivered tick) instead of swapping text.
 - **Promo chip in the widget** using their specials ("$100 OFF House Soft Washing", "15% OFF Paver Restoration / Roof Soft Washing / Window Cleaning", "FREE Trash Can Cleaning with any service over $650"). These are from a promo dated 07/07/2026 and may have expired, so they're left out. Confirm the current fall/holiday offer with the owner first.
 - **Their one real review** on the demo page: "Anthony did a great job power washing my pavers. He was extremely detailed and took his time to be sure the job was done right!…" (Frank Gallina, chamberofcommerce.com, Apr 9 2024). Left out because the widget isn't a proof surface.
 - **Leaf before/after** (`leagcleanBeforeAfter.jpg` on their site) as a real before/after under the wash hero. Not inspected yet.
@@ -47,6 +54,6 @@
 
 ## Not verified
 - Inside an actual GoDaddy HTML section (sandbox flags, iframe height, whether GoDaddy strips anything).
-- Real SMS handoff on iOS and Android (body prefill with newlines; `?&body=` form chosen for both).
+- Real SMS handoff on iOS and Android (body prefill with newlines; `?&body=` form chosen for both). Inside GoDaddy's sandboxed HTML section, the automatic jump to Messages on submit may be blocked; the sent panel's "Open in Messages" link (a real tap) and the copy/email fallbacks cover it, but test on real phones via the published GoDaddy page.
 - Real-device touch on the wash canvas (horizontal drag washes, vertical drag scrolls via `touch-action: pan-y`); frame rate on old phones.
 - Clipboard copy on `file://` (falls back to `execCommand`).
