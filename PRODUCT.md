@@ -23,11 +23,13 @@ Not a new website. A drop-in upgrade to the site they already have, styled to bl
 - Name: Hydro-Pro Power Washing LLC. Phone (732) 288-5941. Info@hydropronj.com. 704 Batchelor Street, Toms River, NJ. Hours Mon–Fri 9am–5pm.
 - Services, in their wording: Roof Soft Wash, House Soft Wash, Concrete/Pavers, Retaining Walls/Fences, Heavy Equipment, Store Fronts, Shrink Wrapping, Cedar Shake/Wood Restoration, Gutter Clean Outs, Window Cleaning (Exterior + Interior), Deck Staining/Painting, Paver Restoration (Sand + Seal), Leaf Clean Up/Removal, Holiday Lighting Packages, Permanent Lighting.
 - Their site states: "All power washing services are done with a biodegradable soap and hot water."
+- Area: Ocean & Monmouth Counties (their promo). Texts accepted: yes ("Call or Text: 732-288-5941").
+- Their own words: "FREE Estimates", "Family Owned & Operated", "Cleaner Homes. Happier Spaces."
 - Season: fall cleanup and holiday lighting promos running now (brief; their site banner reads "Fall into savings with Hydro Pro").
 
 ## Evidence on hand
 - Logo (`hydropro.png`) and hero house photo (`IMG_2697.jpg`) from hydropronj.com.
-- No reviews, no prices collected; none shown.
+- One real review (Frank Gallina, chamberofcommerce.com, Apr 9 2024) and promo specials dated 07/07/2026 are in the brief; neither is shown in the widget (see HANDOFF.md).
 
 ## Principles
 - Facts only; inferences marked in HANDOFF.md.
