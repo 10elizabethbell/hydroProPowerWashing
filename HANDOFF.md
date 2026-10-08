@@ -1,6 +1,6 @@
 # Hydro-Pro Power Washing — handoff at ~60%
 
-**Live file:** index.html · **Repo:** https://github.com/10elizabethbell/hydroProPowerWashing (private) · **Built:** 2026-10-08 from Muse brief (BRIEF.md, 2026-10-08)
+**Live file:** index.html · **Repo:** https://github.com/10elizabethbell/hydroProPowerWashing (private; created before the public-repo rule. `brief.md` was committed in the first two commits and is now untracked, so it's still in history) · **Built:** 2026-10-08 from Muse brief (BRIEF.md, 2026-10-08)
 
 ## What's built
 - **The widget** (`#hpq-block`, between `HPQ:BEGIN` / `HPQ:END`): service dropdown (all 15 of their services in their wording, grouped "This season / Washing / Restoration / Other", plus "Something else / not sure"), name, phone, address, preferred day (Flexible + next 5 weekdays), optional details. Submit validates inline, then opens an SMS to +17322885941 with everything prefilled (`sms:+17322885941?&body=…`). A "your text is ready" state follows with Open again / Copy message / email-it fallbacks for desktops. "Text us instead" button is a plain `sms:` link. Self-contained: its own `<style>` (all selectors scoped under `#hpq-block`, colors in `--hpq-*` vars) and `<script>` IIFE. No network, no tracking.
@@ -33,6 +33,15 @@
 - Which services do you want first in the list? Any to hide (e.g. Heavy Equipment for residential visitors)?
 - Want a photo upload? (Their current form allows attachments; SMS links can't carry files. Could add "text us a photo after" wording.)
 - Where on the site should it go: replacing the current "Get a Free Quote" form, or beside it?
+
+## Phone-first pass (2026-10-08, per your relayed instruction and taste §0)
+- CSS rewritten phone-first: base rules are the 360–430px layout, `min-width:600px` and `min-width:900px` adapt up. The widget's own CSS is phone-first too (`min-width:481px` for the two-column fields).
+- First phone screen (checked at 360 and 390): logo, "Quotes that text you.", the pitch line naming Hydro-Pro, Toms River and the number, then the live wash photo with the example text, then a full-width 56px "Try the widget" button. The longer sub-paragraph shows only from 600px up.
+- Sticky bottom bar on phones ("Get a fast quote" + "Text"), shown once the hero buttons scroll away and hidden while the widget is on screen.
+- Every button is 56px tall; all tap targets measure 44px+ (footer links and the widget's email link got bigger hit areas). No sideways scroll at 360 or 390. Body text 16px.
+- Hover effects are behind `@media (hover:hover)`. The wash hint reads "Swipe across to wash it" on touch screens and "Drag to wash it" with a mouse.
+- The photo (now 1000px, ~114KB) loads last, from a data block at the end of the file, so the buttons and widget work before it arrives. The canvas uses fewer pixels on phones (DPR capped at 1.5). The file is 222KB in total.
+- Facebook in-app browser: if copying is blocked, "Copy widget code" puts the full code into the box above it to select by hand. The text-ready panel always shows the message as selectable text.
 
 ## Review round (done once)
 Finish reviewer fixes applied: frame auto-height, error text linked via `aria-describedby` only once a field is invalid, `role="img"` on the wash, phone copy says "just below the form", shorter empty phone mock on phones, half-washed opening state with grey-brown grime, example bubble in the hero, and sent-state copy that no longer claims Messages is already open (it says "Tap Open in Messages"). Its other notes: no seeded concept roll was run for the direction (code-led build); and the water lives only in the hero, while your taste file asks for wave dividers carrying the motion through the page. Both are yours to decide.
