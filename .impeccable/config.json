@@ -46,6 +46,31 @@
         "rule": "design-system-color",
         "value": "rgb(169, 191, 232)",
         "createdAt": "2026-10-17T18:39:02.802Z"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "44px",
+        "createdAt": "2026-10-17T18:40:27.884Z"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "34px",
+        "createdAt": "2026-10-17T18:40:27.949Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#68717f",
+        "createdAt": "2026-10-17T18:40:28.015Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#5a616d",
+        "createdAt": "2026-10-17T18:40:28.083Z"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "15px",
+        "createdAt": "2026-10-17T18:40:28.148Z"
       }
     ]
   }
