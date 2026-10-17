@@ -8,7 +8,9 @@
 - **Embed:** instructions in the comment at the top of the file. Option A (paste the block into a GoDaddy HTML section) has a "Copy widget code" button that copies the pristine block (`window.HPQ_SOURCE`). Option B: `?embed` shows only the widget, for an iframe.
 - **Demo page around it (the pitch):** benefit headline to the owner ("Quotes that text you."), their logo, and the signature element: **their own hero photo under a layer of grime that you pressure-wash clean** by dragging (mouse or finger), with spray droplets; an idle wand keeps washing on its own and the grime slowly creeps back. Beside the widget, a phone mock shows the exact text the owner would receive, updating as you type.
 - An "Example request" text bubble overlaps the photo's corner so the first screen shows the product (sample data, no real address).
-- Footer with their details and "Demo one-pager — free sample."
+- Footer with their details, phone and email (the only email on the page).
+- Header: logo left, (732) 288-5941 top right as a tap-to-call link; the number isn't repeated on the first screen.
+- Favicon and home-screen icon cropped from their logo (the "Hy" and swooshes; the italic letters overlap, so a clean "H" alone isn't possible). Share preview: `og-image.jpg` (their house photo, 1200x630), `og:url` points at the Pages site.
 
 ## Assumptions I made
 - **Copy-paste is the recommended embed.** GoDaddy Website Builder's HTML section runs custom code in its own iframe, so a self-contained block should work without hosting. Not tested inside GoDaddy.
@@ -25,6 +27,11 @@
 - Brief says "no logo found" and "colors unknown": I pulled the logo (`hydropro.png`) and blue `#0d57db` straight from hydropronj.com.
 - Brief says they have no quote form; their site does have a generic GoDaddy contact form (name/email/phone/address/attachments). Frame the pitch as faster + lands as a text, not "you have no form".
 
+## Finishing-rules pass (2026-10-17)
+Applied: no demo/sample wording (header tag, footer line, "Sample customer" now "Dana R."); favicon + og image; phone number only top right on the first screen (removed from the hero line); no sticky bar; no email in the widget (fine-print link and "email it instead" removed; footer email kept); photo caption removed; hover + focus outlines on every widget control (blue); hero drag works in every direction; widget fine print in the owner's voice ("We're family owned, and we read every request ourselves and text you back with your free estimate": "read ourselves" is my inference, confirm with the owner); iframe embed code now points at the live Pages URL.
+Not applicable (widget scope): Facebook link (no business page exists; the only FB link is a personal profile, not linked); work-photo section rules; services list.
+Kept because of scope: the page still talks to the owner ("Try it like a customer", "See the embed code"); it's a widget pitch, not their site.
+
 ## Questions for the owner
 - (732) 288-5941 takes texts (per your promo). Is that the phone that should get quote requests?
 - Who is Anthony (named in a review)? Owner name for the outreach.
@@ -37,15 +44,14 @@
 ## Phone-first pass (2026-10-08, per your relayed instruction and taste §0)
 - CSS rewritten phone-first: base rules are the 360–430px layout, `min-width:600px` and `min-width:900px` adapt up. The widget's own CSS is phone-first too (`min-width:481px` for the two-column fields).
 - First phone screen (checked at 360 and 390): logo, "Quotes that text you.", the pitch line naming Hydro-Pro, Toms River and the number, then the live wash photo with the example text, then a full-width 56px "Try the widget" button. The longer sub-paragraph shows only from 600px up.
-- Sticky bottom bar on phones ("Get a fast quote" + "Text"), shown once the hero buttons scroll away and hidden while the widget is on screen.
-- Every button is 56px tall; all tap targets measure 44px+ (footer links and the widget's email link got bigger hit areas). No sideways scroll at 360 or 390. Body text 16px.
+- (Sticky bottom bar removed 2026-10-17 per the finishing rules.)
+- Every button is 56px tall; all tap targets measure 44px+ (footer links got bigger hit areas). No sideways scroll at 360 or 390. Body text 16px.
 - Hover effects are behind `@media (hover:hover)`. The wash hint reads "Swipe across to wash it" on touch screens and "Drag to wash it" with a mouse.
 - The photo (now 1000px, ~114KB) loads last, from a data block at the end of the file, so the buttons and widget work before it arrives. The canvas uses fewer pixels on phones (DPR capped at 1.5). The file is 222KB in total.
 - Facebook in-app browser: if copying is blocked, "Copy widget code" puts the full code into the box above it to select by hand. The text-ready panel always shows the message as selectable text.
 
 ## Review round (done once)
 Finish reviewer fixes applied: frame auto-height, error text linked via `aria-describedby` only once a field is invalid, `role="img"` on the wash, phone copy says "just below the form", shorter empty phone mock on phones, half-washed opening state with grey-brown grime, example bubble in the hero, and sent-state copy that no longer claims Messages is already open (it says "Tap Open in Messages"). Its other notes: no seeded concept roll was run for the direction (code-led build); and the water lives only in the hero, while your taste file asks for wave dividers carrying the motion through the page. Both are yours to decide.
-On phones the "Your photo, hydropronj.com" caption is hidden so the drag hint and example bubble don't collide.
 
 ## Ideas not built (yours to pick)
 - Animated water/spray dividers between sections (carry the wash motion past the hero).
@@ -64,5 +70,5 @@ On phones the "Your photo, hydropronj.com" caption is hidden so the drag hint an
 ## Not verified
 - Inside an actual GoDaddy HTML section (sandbox flags, iframe height, whether GoDaddy strips anything).
 - Real SMS handoff on iOS and Android (body prefill with newlines; `?&body=` form chosen for both). Inside GoDaddy's sandboxed HTML section, the automatic jump to Messages on submit may be blocked; the sent panel's "Open in Messages" link (a real tap) and the copy/email fallbacks cover it, but test on real phones via the published GoDaddy page.
-- Real-device touch on the wash canvas (horizontal drag washes, vertical drag scrolls via `touch-action: pan-y`); frame rate on old phones.
+- Real-device touch on the wash canvas (drags wash in every direction via `touch-action: none`; the page scrolls when the finger starts outside the photo); frame rate on old phones.
 - Clipboard copy on `file://` (falls back to `execCommand`).

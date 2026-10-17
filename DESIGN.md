@@ -109,7 +109,6 @@ rounded:
   hpq-card: "16px"
 spacing:
   gutter: "20px"
-  bar-inset: "16px"
   section-phone: "44px"
   section: "64px"
   card-phone: "22px 18px"
@@ -148,9 +147,6 @@ components:
     backgroundColor: "{colors.paper}"
     typography: "{typography.tag}"
     height: "72px"
-  sticky-bar:
-    backgroundColor: "rgba(255,255,255,.97)"
-    padding: "10px 16px calc(10px + env(safe-area-inset-bottom))"
   wash-phone:
     backgroundColor: "{colors.wash-fallback}"
     rounded: "{rounded.wash-phone}"
@@ -254,10 +250,10 @@ A single-blue palette over cool, near-white neutrals; the widget uses warm-free 
 
 ### Neutral (demo page)
 - **Mist Ground** (`ground`): the page body. Every un-sectioned stretch of page sits on it.
-- **Paper** (`paper`): top bar, the "Try it" band, embed cards; at 97% opacity, the sticky thumb bar.
+- **Paper** (`paper`): top bar, the "Try it" band, embed cards.
 - **Sky Wash** (`sky`): ghost-button hover fill and the "Easiest" chip.
-- **Slate Ink** (`ink`): body text. **Slate Soft** (`ink-soft`): secondary copy, section intros, the top-bar tag, the preview heading.
-- **Hairline** (`line`): 1px borders on the top bar, sticky bar, section bands and cards.
+- **Slate Ink** (`ink`): body text. **Slate Soft** (`ink-soft`): secondary copy, section intros, the preview heading.
+- **Hairline** (`line`): 1px borders on the top bar, section bands and cards.
 - Code blocks sit on a blue-tinted panel (`#eef3fb`). Footer copy is pale blue (`#d7e3fa`, demo note `#a9bfe8`) on navy.
 
 ### Intentional one-off literals
@@ -303,7 +299,7 @@ The phone preview and the example text bubble copy a phone's own Messages app so
 - **Pitch** (400, `clamp(17px,1.6vw,20px)`, 1.42, max 36ch): the one-line pitch under the hero headline; 17px on phones.
 - **Body** (400, 16px, 1.55): running copy; section intros cap at 60ch. The hero sub-line (44ch) is hidden on phones and appears from 600px.
 - **Label** (700, 14px, 0.12em, uppercase): every page button, phone and desktop alike.
-- **Tag** (700, uppercase): the top-bar tag at 11px / 0.1em on phones, 12px / 0.14em from 600px. The preview heading is 13px / 0.14em.
+- **Preview heading** (700, uppercase): The preview heading is 13px / 0.14em.
 - **Secondary small copy**: preview caption 15px on phones, 14px from 900px; "Copied" confirmation 15px/600 in blue.
 
 ### Hierarchy (widget), phone first
@@ -313,7 +309,7 @@ The widget type ramp does not change with width; only spacing and layout do.
 - **Body / Field** (400, 16px, 1.4–1.5): field text. 16px is a floor so iOS does not zoom on focus.
 - **Label** (700, 12px, 0.1em, uppercase): field labels and the day legend.
 - **Button** (700, 14px, 0.14em, uppercase).
-- **Fine** (400, 14px, 1.5, centered, muted): service area, hours, email fallback. Error messages, status line, the copied-text panel and the text link are also 14px.
+- **Fine** (400, 14px, 1.5, centered, muted): service area, hours. Error messages, status line, the copied-text panel and the text link are also 14px.
 
 ### Named Rules
 **The Two Voices Rule.** Page headings are 800 uppercase with negative tracking; widget headings are 700 sentence case with zero tracking and explicitly reset `text-transform`. A widget heading that shouts would fight the host site's own headings.
@@ -351,12 +347,11 @@ Soft lift, never hard. Shadows use a negative spread so they pool under an eleme
 - **Hero lift** (`0 20px 40px -22px rgba(3,43,116,.45), 0 4px 12px rgba(3,43,116,.12)`): the wash canvas, all widths.
 - **Floating bubble** (`0 14px 30px -16px rgba(3,43,116,.55), 0 3px 10px rgba(3,43,116,.14)`): the example text overlapping the photo.
 - **Device** (`0 30px 60px -30px rgba(3,43,116,.5), 0 6px 18px rgba(3,43,116,.1)`): the phone mock.
-- **Pill hint** (`0 6px 16px -6px rgba(3,43,116,.35)`): the "Swipe across to wash it" / "Drag to wash it" hint pill.
-- **Thumb bar** (`0 -12px 26px -18px rgba(3,43,116,.4)`): the sticky bottom bar; the only upward shadow, because the bar floats over content from below.
+- **Pill hint** (`0 6px 16px -6px rgba(3,43,116,.35)`): the "Swipe to wash it" / "Drag to wash it" hint pill.
 - **Widget card** (`0 18px 40px -26px rgba(27,27,27,.35)`): neutral grey, because the widget must sit on any host ground.
 
 ### Named Rules
-**The Tinted Lift Rule.** Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone, the thumb bar). Cards and sections use hairlines.
+**The Tinted Lift Rule.** Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone). Cards and sections use hairlines.
 
 ## Shapes
 
@@ -380,12 +375,6 @@ Confident pills, always in a matched pair, sized for thumbs.
 - **Focus:** page uses the global focus ring; widget uses a 3px 40%-blue outline, 2px offset.
 - **Icons:** inline stroke SVG (2px stroke, round caps), 20px on page buttons, 18px in the widget, 10px gap.
 
-### Sticky Thumb Bar (phones)
-A bottom bar that keeps the two actions under the thumb once the hero buttons scroll away.
-- **Structure:** fixed to the bottom edge, paper at 97% with a hairline top and the thumb-bar shadow; 10px / 16px padding plus the device's safe-area inset at the bottom.
-- **Contents:** the standard button pair: primary "Get a fast quote" filling the row, ghost "Text" with an icon at content width (20px side padding), 10px gap.
-- **Behavior:** shown only while neither the hero buttons nor the widget are on screen; slides up 0.35s on the soft ease-out and hides with `visibility` so it leaves the tab order. Absent from 900px.
-
 ### Chips
 - **Day chip (widget):** radio styled as a 52px tile, 10px radius, field-stroke border, weekday 14px/600 over a 12px muted date. Three per row on phones, one even row from 481px. Hover (hover-capable pointers) turns the border blue; selected fills blue with white text; keyboard focus shows a 3px 30%-blue ring.
 - **Best chip (page):** small sky pill with blue 11px tracked text, inline after a card title.
@@ -402,17 +391,17 @@ A bottom bar that keeps the two actions under the thumb once the hero buttons sc
 - **Text link** (widget, "Edit"-style): 14px/600 blue underlined, 44px min tap height.
 
 ### Navigation
-- **Top bar:** paper with a hairline bottom. Phones: 58px tall, logo 34px, 11px tag. From 600px: 72px, logo 44px, 12px tag. No links; the page is one scroll. On phones the sticky thumb bar does the navigating.
+- **Top bar:** paper with a hairline bottom. Phones: 58px tall, logo 34px, the phone number top right as a 16px/700 navy `tel:` link (44px tap height; underlined blue on hover). From 600px: 72px, logo 44px, number 17px. The number appears only here on the first screen. No sticky bottom bar (removed 2026-10-17, finishing rules). 
 
 ### Wash Canvas (signature)
 The owner's own hero photo (never stock) under a generated grime layer that the visitor pressure-washes clean.
-- **Frame:** 16:10 with an 18px radius on phones, 4:3 with 22px from 600px; hero lift shadow; grime-olive fallback ground; crosshair cursor; `touch-action: pan-y` so vertical drags still scroll; text selection and touch callout disabled.
+- **Frame:** 16:10 with an 18px radius on phones, 4:3 with 22px from 600px; hero lift shadow; grime-olive fallback ground; crosshair cursor; `touch-action: none` so drags wash in every direction (page scrolls outside the photo); `overscroll-behavior-y: none` on html stops pull-to-refresh; text selection and touch callout disabled.
 - **Layers:** photo (`object-position` 50% 45%), grime canvas (grime minus a "clean mask"), spray canvas.
 - **Grime:** the grime palette above: an olive-brown base with radial blotches in five tones, 90 dark drip streaks, 2600 speckles. Seeded random, so the grime is identical every load.
 - **Opening state:** one clean diagonal double stripe, the classic first pass, so the first viewport is half washed.
 - **Tunable constants** (top of the wash IIFE): `BRUSH` 0.075 of width, `BRUSH_STRENGTH` 0.55 (two passes ≈ spotless), `REGRIME_EVERY` 30 frames, `REGRIME_ALPHA` 0.02 (~17s half-life), `IDLE_AFTER` 2200ms, `WAND_SPEED` 1.0, `SPRAY_PER_FRAME` 7 (halved under 520px). The idle wand washes at 70% strength on layered sines.
 - **Spray:** white and pale-blue droplets with gravity and drag, capped at 600.
-- **Overlays:** the hint pill (white 92%, navy 13px/700) sits top left on phones and bottom left from 900px, reads "Swipe across to wash it" on touch and "Drag to wash it" on fine pointers, and lifts away on first touch. A navy 72% caption pill appears top right from 900px only. The example text bubble overlaps the bottom-right corner: on phones 10px in from the right, 26px below the frame, max 205px, 12px text; from 900px it hangs 18px past the right edge, max 250px, 13px text.
+- **Overlays:** the hint pill (white 92%, navy 13px/700) sits top left on phones and bottom left from 900px, reads "Swipe to wash it" on touch and "Drag to wash it" on fine pointers, and lifts away on first touch. The example text bubble overlaps the bottom-right corner: on phones 10px in from the right, 26px below the frame, max 205px, 12px text; from 900px it hangs 18px past the right edge, max 250px, 13px text.
 - **Restraint:** pauses off-screen; under reduced motion there is no loop, no spray, no wand, and washing still works by direct drag.
 
 ### Phone Preview
