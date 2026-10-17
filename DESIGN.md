@@ -56,16 +56,14 @@ typography:
     fontWeight: 700
     lineHeight: 1
     letterSpacing: "0.12em"
-  tag-phone:
+  tel-phone:
     fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "11px"
+    fontSize: "16px"
     fontWeight: 700
-    letterSpacing: "0.1em"
-  tag:
+  tel:
     fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "12px"
+    fontSize: "17px"
     fontWeight: 700
-    letterSpacing: "0.14em"
   code:
     fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
     fontSize: "13px"
@@ -141,11 +139,13 @@ components:
     backgroundColor: "{colors.sky}"
   top-bar-phone:
     backgroundColor: "{colors.paper}"
-    typography: "{typography.tag-phone}"
+    textColor: "{colors.blue-ink}"
+    typography: "{typography.tel-phone}"
     height: "58px"
   top-bar:
     backgroundColor: "{colors.paper}"
-    typography: "{typography.tag}"
+    textColor: "{colors.blue-ink}"
+    typography: "{typography.tel}"
     height: "72px"
   wash-phone:
     backgroundColor: "{colors.wash-fallback}"
@@ -228,7 +228,7 @@ Two systems share one file and must stay separate. The **widget** (`#hpq-block`,
 
 Both systems are built phone first. The base styles are the 360–430px layout and every larger size is an adaptation layered on top, because the owner will open the pitch on a phone and his customers will fill the widget on one. Phone values in this file are the primary steps of each scale; tablet and desktop values come second.
 
-The page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash and the sticky thumb bar; the widget only changes state.
+The page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash; the widget only changes state.
 
 **Key Characteristics:**
 - Phone first: base CSS is the phone layout; `min-width` queries adapt up.
@@ -265,9 +265,9 @@ These appear once each in the shipped CSS and are deliberate; reuse them for the
 
 ### Messaging-app mimicry (not palette)
 The phone preview and the example text bubble copy a phone's own Messages app so the owner recognizes what lands on his phone. Their greys belong to that imitation, not to this system, and must not leak into page or widget UI.
-- Received bubble `#e9e9eb` with `#111` text; placeholder text in the bubble `#9aa1ab`.
-- Thread header `#f6f7f9` over a `#e9ecf1` rule; contact name `#222`; contact and example-label grey `#6b7380`; timestamp `#8a919c`.
-- Avatar disc `#b9c3d3` with white initial; device bezel `#dfe6f1`; screen white.
+- Received bubble `#e9e9eb` with `#111` text; placeholder text in the bubble `#5a616d`.
+- Thread header `#f6f7f9` over a `#e9ecf1` rule; contact name `#222`; contact sub-line (11px), example label and timestamp (11px) in `#5a616d`, the same grey as the bubble placeholder.
+- Avatar disc `#68717f` with white initial; device bezel `#dfe6f1`; screen white.
 
 ### Neutral (widget)
 - **Charcoal** (`hpq-ink`): all widget text, labels included.
@@ -299,6 +299,7 @@ The phone preview and the example text bubble copy a phone's own Messages app so
 - **Pitch** (400, `clamp(17px,1.6vw,20px)`, 1.42, max 36ch): the one-line pitch under the hero headline; 17px on phones.
 - **Body** (400, 16px, 1.55): running copy; section intros cap at 60ch. The hero sub-line (44ch) is hidden on phones and appears from 600px.
 - **Label** (700, 14px, 0.12em, uppercase): every page button, phone and desktop alike.
+- **Phone link** (700, 16px on phones, 17px from 600px, navy, no tracking): the top-bar `tel:` number.
 - **Preview heading** (700, uppercase): The preview heading is 13px / 0.14em.
 - **Secondary small copy**: preview caption 15px on phones, 14px from 900px; "Copied" confirmation 15px/600 in blue.
 
@@ -324,11 +325,11 @@ Phone first. Base CSS is the 360–430px layout; `min-width:600px` adapts for la
 
 **Container:** centered `wrap`, 1180px max, 20px gutters at every width.
 
-**Phones (base):** one column throughout. The hero stacks copy, then the wash, then the action buttons, so the photo is in the first viewport and the buttons follow it. Hero action buttons stack full width with 10px between. Hero padding 18px top / 30px bottom, 16px between hero rows; the wash frame keeps 22px below it for the overlapping example bubble. Sections pad 44px top / 52px bottom. The widget and preview stack with 40px between; the embed cards stack with 20px between. The footer pads 110px at the bottom so the sticky bar never covers its last line.
+**Phones (base):** one column throughout. The hero stacks copy, then the wash, then the action buttons, so the photo is in the first viewport and the buttons follow it. Hero action buttons stack full width with 10px between. Hero padding 18px top / 30px bottom, 16px between hero rows; the wash frame keeps 22px below it for the overlapping example bubble. Sections pad 44px top / 52px bottom. The widget and preview stack with 40px between; the embed cards stack with 20px between. The footer pads 36px top / 40px bottom; there is no sticky bottom bar to clear.
 
 **600px and up:** the hero sub-line appears; hero buttons sit side by side (flex, 12px gap, wrapping); the wash becomes 4:3. Sections open to 64px top (72px bottom on "Try it"); embed cards pad 28px and their buttons shrink to content width. The top bar grows to 72px. The phone mock widens to 310px.
 
-**900px and up:** the hero becomes two columns (copy and actions in `1fr` on the left, wash in `1.15fr` on the right spanning both rows, 48px column gap, 26px row gap, bottom-aligned); hero padding 44/56px. "Try it" becomes the widget (max 560px) beside a sticky phone preview (top 24px), 56px gap. Embed cards go two up, 28px gap. Footer pads 40/48px. The sticky bar is removed.
+**900px and up:** the hero becomes two columns (copy and actions in `1fr` on the left, wash in `1.15fr` on the right spanning both rows, 48px column gap, 26px row gap, bottom-aligned); hero padding 44/56px. "Try it" becomes the widget (max 560px) beside a sticky phone preview (top 24px), 56px gap. Embed cards go two up, 28px gap. Footer pads 40/48px.
 
 Bands alternate grounds: hero on `ground`, "Try it" on `paper` with hairlines top and bottom, embed back on `ground`, footer on navy.
 
@@ -373,6 +374,7 @@ Confident pills, always in a matched pair, sized for thumbs.
 - **Ghost / Alt:** transparent with blue text and outline; hover fills with sky (page) or 7% blue (widget).
 - **Hover / Press:** hover applies only on hover-capable pointers (`@media (hover:hover)`), so a tap never leaves a stuck hover state; primary darkens to pressed blue (fill and outline). Press scales to 0.97 (page) or 0.98 (widget). Tap highlight is suppressed. Transitions 0.15–0.2s.
 - **Focus:** page uses the global focus ring; widget uses a 3px 40%-blue outline, 2px offset.
+- **Widget hover outline:** on hover-capable pointers, widget buttons and text links gain a 2px 45%-blue outline at 2px offset, on top of their fill change.
 - **Icons:** inline stroke SVG (2px stroke, round caps), 20px on page buttons, 18px in the widget, 10px gap.
 
 ### Chips
@@ -386,12 +388,14 @@ Confident pills, always in a matched pair, sized for thumbs.
 
 ### Inputs / Fields
 - **Style:** 48px min height (76px textarea), 11px/14px padding, 1px field-stroke border, 10px radius, white fill, 16px text. Select carries an inline chevron SVG at right 14px.
+- **Hover** (hover-capable pointers): border turns blue plus a lighter 3px 12%-blue ring.
 - **Focus:** border turns blue plus a 3px 22%-blue glow; no outline.
 - **Error:** border turns error red; a 14px red message appears below and is linked by `aria-describedby` only while invalid.
 - **Text link** (widget, "Edit"-style): 14px/600 blue underlined, 44px min tap height.
+- **No email in the widget:** contact inside the widget is text and phone only; the business email appears once, in the page footer.
 
 ### Navigation
-- **Top bar:** paper with a hairline bottom. Phones: 58px tall, logo 34px, the phone number top right as a 16px/700 navy `tel:` link (44px tap height; underlined blue on hover). From 600px: 72px, logo 44px, number 17px. The number appears only here on the first screen. No sticky bottom bar (removed 2026-10-17, finishing rules). 
+- **Top bar:** paper with a hairline bottom. Phones: 58px tall, logo 34px, the phone number top right as a 16px/700 navy `tel:` link (44px tap height; underlined blue on hover). From 600px: 72px, logo 44px, number 17px. The number appears only here on the first screen. No sticky bottom bar (removed 2026-10-17, finishing rules).
 
 ### Wash Canvas (signature)
 The owner's own hero photo (never stock) under a generated grime layer that the visitor pressure-washes clean.
