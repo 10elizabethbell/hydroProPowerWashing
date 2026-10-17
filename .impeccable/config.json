@@ -76,6 +76,11 @@
         "rule": "design-system-color",
         "value": "#767676",
         "createdAt": "2026-10-17T20:48:35.918Z"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "11px",
+        "createdAt": "2026-10-17T20:50:15.523Z"
       }
     ]
   }
