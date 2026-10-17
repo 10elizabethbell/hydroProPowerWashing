@@ -1,0 +1,52 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "open sans",
+        "createdAt": "2026-10-17T18:39:02.273Z"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-17T18:39:02.352Z"
+      },
+      {
+        "rule": "gpt-thin-border-wide-shadow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-17T18:39:02.461Z"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-17T18:39:02.553Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(218, 218, 218)",
+        "createdAt": "2026-10-17T18:39:02.638Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(215, 227, 250)",
+        "createdAt": "2026-10-17T18:39:02.723Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(169, 191, 232)",
+        "createdAt": "2026-10-17T18:39:02.802Z"
+      }
+    ]
+  }
+}
