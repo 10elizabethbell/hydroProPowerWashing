@@ -33,6 +33,7 @@ Scope is still the brief's: an embeddable quote **widget** plus the page that sh
   - A close band with their own tagline "Cleaner homes. Happier spaces.", "family owned & operated", and the biodegradable soap and hot water line.
 - **Floating text circle (on, `CONFIG.FLOAT`):** it opens a text to Hydro-Pro. It shows only after the hero, hides while the form is on screen, and is gone without JS.
 - **One quiet fade-up** below the first screen. With reduced motion or no JS, everything shows at once.
+- **Form fixes carried over from the DPG reference build:** fields are now #e6ecf5, because the paper fill was about 1.08:1 on the white card. The red error border now stays when submit focuses a bad field. The selected day chip gets a visible keyboard outline. The header number gets `word-spacing:-.15em` so Cal Sans doesn't split it in two.
 - **Weight:** the photos and logo moved out of the HTML into `hero.webp` (1000px, 114KB), `hero-1600.webp` (200KB, via `srcset` for big and Retina screens) and `logo.webp`.
   - The page is now 45KB instead of 220KB.
   - The `?embed` frame no longer downloads photos it never shows.
