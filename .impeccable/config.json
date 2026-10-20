@@ -4,83 +4,166 @@
     "ignoreFiles": [],
     "ignoreValues": [
       {
-        "rule": "overused-font",
-        "value": "open sans",
-        "createdAt": "2026-10-17T18:39:02.273Z"
-      },
-      {
-        "rule": "all-caps-body",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-10-17T18:39:02.352Z"
-      },
-      {
-        "rule": "gpt-thin-border-wide-shadow",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-10-17T18:39:02.461Z"
-      },
-      {
-        "rule": "clipped-overflow-container",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-10-17T18:39:02.553Z"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(218, 218, 218)",
-        "createdAt": "2026-10-17T18:39:02.638Z"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(215, 227, 250)",
-        "createdAt": "2026-10-17T18:39:02.723Z"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(169, 191, 232)",
-        "createdAt": "2026-10-17T18:39:02.802Z"
-      },
-      {
         "rule": "design-system-radius",
         "value": "44px",
-        "createdAt": "2026-10-17T18:40:27.884Z"
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.328Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
       },
       {
         "rule": "design-system-radius",
         "value": "34px",
-        "createdAt": "2026-10-17T18:40:27.949Z"
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.391Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "18px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.455Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
       },
       {
         "rule": "design-system-color",
         "value": "#68717f",
-        "createdAt": "2026-10-17T18:40:28.015Z"
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.518Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
       },
       {
         "rule": "design-system-color",
         "value": "#5a616d",
-        "createdAt": "2026-10-17T18:40:28.083Z"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "15px",
-        "createdAt": "2026-10-17T18:40:28.148Z"
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.582Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
       },
       {
         "rule": "design-system-color",
-        "value": "#767676",
-        "createdAt": "2026-10-17T20:48:35.918Z"
+        "value": "#e9e9eb",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.646Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#111",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.710Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#222",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.774Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#dfe5f0",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.838Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f6f7f9",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.902Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#e9ecf1",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:32.970Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
       },
       {
         "rule": "design-system-font-size",
         "value": "11px",
-        "createdAt": "2026-10-17T20:50:15.523Z"
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.034Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "13.5px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.097Z",
+        "reason": "Ellie: phone preview copies iOS Messages (mimicry, DESIGN.md Phone preview)"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.162Z",
+        "reason": "Ellie: calm band style, calm-photo-style.md 2026-10-19: faint 135deg line texture on deep bands, sanctioned"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.227Z",
+        "reason": "Ellie: calm band style, calm-photo-style.md 2026-10-19: eyebrow pills sanctioned"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.295Z",
+        "reason": "Ellie: calm band style, calm-photo-style.md 2026-10-19: eyebrow pills sanctioned"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(.34, 1.56, .64, 1)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.358Z",
+        "reason": "Ellie: calm band style, calm-photo-style.md 2026-10-19: hero H1 letter bounce-in sanctioned"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:54:33.421Z",
+        "reason": "Ellie: calm band style, calm-photo-style.md 2026-10-19: hero H1 letter bounce-in sanctioned"
       }
     ]
   }

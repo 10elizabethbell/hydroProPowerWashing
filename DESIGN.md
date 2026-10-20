@@ -1,435 +1,351 @@
 ---
-name: Hydro-Pro Quote Widget
-description: A drop-in quote widget that blends into hydropronj.com, shown on a phone-first pitch page where you pressure-wash the owner's own house photo clean.
+name: Hydro-Pro Power Washing quote widget
+description: A drop-in text-me-a-quote widget for hydropronj.com, shown on a calm paper-and-navy pitch page coloured from the Hydro-Pro logo.
 colors:
+  paper: "#f4f6fb"
+  card: "#ffffff"
+  ink: "#0b2457"
+  body: "#2a3a4f"
+  soft: "#4a5870"
+  navy: "#0a3d99"
+  deep: "#081f4d"
+  on-dark: "#f4f7fc"
+  on-dark-soft: "#cbd8ee"
+  gold: "#f0c24b"
+  gold-2: "#f6d272"
+  gold-ink: "#85601a"
   blue: "#0d57db"
-  blue-deep: "#073fa3"
-  blue-ink: "#032b74"
-  ink: "#1f2733"
-  ink-soft: "#4a5463"
-  line: "#dfe4ec"
-  ground: "#f4f7fb"
-  paper: "#ffffff"
-  sky: "#e8f0fd"
-  selection: "#cfe0ff"
-  focus-ring: "#7aa7f7"
-  wash-fallback: "#6b7458"
-  hpq-accent: "#0d57db"
-  hpq-accent-dark: "#073fa3"
-  hpq-ink: "#303030"
-  hpq-muted: "#5e5e5e"
-  hpq-line: "#949494"
-  hpq-field: "#ffffff"
-  hpq-bg: "#ffffff"
-  hpq-error: "#b42318"
+  error: "#b3261e"
+  placeholder: "#5f6b80"
+  on-ink-soft: "#dbe4f5"
 typography:
   display:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "clamp(34px, 9.6vw, 72px)"
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(40px, 11.4vw, 80px)"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-0.005em"
   headline:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "clamp(28px, 3.4vw, 42px)"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(30px, 7.6vw, 48px)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.005em"
+  headline-widget:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "30px"
+    fontWeight: 400
+    lineHeight: 1.08
   title:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "24px"
+    fontWeight: 400
+    lineHeight: 1.08
+  title-sm:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "22px"
+    fontWeight: 400
+    lineHeight: 1.08
+  title-step:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "21px"
+    fontWeight: 400
+    lineHeight: 1.2
+  title-xs:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
     fontSize: "20px"
-    fontWeight: 800
-    letterSpacing: "-0.01em"
-  pitch:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "clamp(17px, 1.6vw, 20px)"
     fontWeight: 400
-    lineHeight: 1.42
-  body:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "16px"
+    lineHeight: 1.3
+  button:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "18px"
     fontWeight: 400
-    lineHeight: 1.55
-  label:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 700
     lineHeight: 1
-    letterSpacing: "0.12em"
-  tel-phone:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "16px"
-    fontWeight: 700
-  tel:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+  label:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
     fontSize: "17px"
-    fontWeight: 700
+    fontWeight: 400
+    lineHeight: 1.2
+  lead:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.7vw, 20px)"
+    fontWeight: 400
+    lineHeight: 1.5
+  lede:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 19px)"
+    fontWeight: 400
+    lineHeight: 1.7
+  body:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.7
+  body-sm:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.5
+  eyebrow:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "0.02em"
+  caption:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.2
   code:
     fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
     fontSize: "13px"
+    fontWeight: 400
     lineHeight: 1.55
-  hpq-title:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "24px"
-    fontWeight: 700
-    lineHeight: 1.2
-    letterSpacing: "0"
-  hpq-body:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "16px"
-    fontWeight: 400
-    lineHeight: 1.5
-  hpq-label:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "12px"
-    fontWeight: 700
-    letterSpacing: "0.1em"
-  hpq-button:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 700
-    lineHeight: 1.2
-    letterSpacing: "0.14em"
-  hpq-fine:
-    fontFamily: "\"Open Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.5
 rounded:
   focus: "6px"
-  pre: "12px"
-  r: "16px"
-  wash-phone: "18px"
-  wash: "22px"
+  field: "10px"
+  card: "24px"
   pill: "999px"
-  hpq-radius: "10px"
-  hpq-card-phone: "14px"
-  hpq-card: "16px"
 spacing:
   gutter: "20px"
-  section-phone: "44px"
+  gutter-wide: "40px"
+  card-pad: "24px 20px"
+  card-pad-wide: "32px"
   section: "64px"
-  card-phone: "22px 18px"
-  card: "28px"
-  grid-gap-phone: "40px"
-  grid-gap: "56px"
-  hpq-card-phone: "22px 18px"
-  hpq-card: "28px"
-  hpq-field-gap: "16px"
-  hpq-col-gap: "14px"
-  hpq-chip-gap: "8px"
+  section-wide: "96px"
 components:
   button-primary:
-    backgroundColor: "{colors.blue}"
-    textColor: "{colors.paper}"
-    typography: "{typography.label}"
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "0 24px"
+    padding: "0 26px"
     height: "56px"
   button-primary-hover:
-    backgroundColor: "{colors.blue-deep}"
+    backgroundColor: "{colors.gold-2}"
+    textColor: "{colors.ink}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.blue}"
-    typography: "{typography.label}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "0 24px"
+    padding: "0 26px"
     height: "56px"
-  button-ghost-hover:
-    backgroundColor: "{colors.sky}"
-  top-bar-phone:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.blue-ink}"
-    typography: "{typography.tel-phone}"
-    height: "58px"
-  top-bar:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.blue-ink}"
-    typography: "{typography.tel}"
-    height: "72px"
-  wash-phone:
-    backgroundColor: "{colors.wash-fallback}"
-    rounded: "{rounded.wash-phone}"
-  wash:
-    backgroundColor: "{colors.wash-fallback}"
-    rounded: "{rounded.wash}"
-  card-way-phone:
-    backgroundColor: "{colors.paper}"
-    rounded: "{rounded.r}"
-    padding: "22px 18px"
-  card-way:
-    backgroundColor: "{colors.paper}"
-    rounded: "{rounded.r}"
-    padding: "28px"
-  chip-best:
-    backgroundColor: "{colors.sky}"
-    textColor: "{colors.blue}"
-    rounded: "{rounded.pill}"
-    padding: "3px 9px"
-  code-block:
-    backgroundColor: "#eef3fb"
-    textColor: "{colors.blue-ink}"
-    typography: "{typography.code}"
-    rounded: "{rounded.pre}"
-    padding: "14px"
-  hpq-card-phone:
-    backgroundColor: "{colors.hpq-bg}"
-    textColor: "{colors.hpq-ink}"
-    rounded: "{rounded.hpq-card-phone}"
-    padding: "22px 18px"
-    width: "100%"
-  hpq-card:
-    backgroundColor: "{colors.hpq-bg}"
-    textColor: "{colors.hpq-ink}"
-    rounded: "{rounded.hpq-card}"
-    padding: "28px"
-    width: "560px"
-  hpq-input:
-    backgroundColor: "{colors.hpq-field}"
-    textColor: "{colors.hpq-ink}"
-    typography: "{typography.hpq-body}"
-    rounded: "{rounded.hpq-radius}"
-    padding: "11px 14px"
-    height: "48px"
-  hpq-day:
-    backgroundColor: "{colors.hpq-field}"
-    textColor: "{colors.hpq-ink}"
-    rounded: "{rounded.hpq-radius}"
-    padding: "6px 12px"
-    height: "52px"
-  hpq-day-selected:
-    backgroundColor: "{colors.hpq-accent}"
-    textColor: "#ffffff"
-  hpq-send:
-    backgroundColor: "{colors.hpq-accent}"
-    textColor: "#ffffff"
-    typography: "{typography.hpq-button}"
-    rounded: "{rounded.pill}"
-    padding: "0 20px"
-    height: "56px"
-  hpq-send-hover:
-    backgroundColor: "{colors.hpq-accent-dark}"
-  hpq-alt:
+  button-line:
     backgroundColor: "transparent"
-    textColor: "{colors.hpq-accent}"
-    typography: "{typography.hpq-button}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "0 20px"
+    padding: "0 26px"
     height: "56px"
+  eyebrow:
+    backgroundColor: "rgba(11,36,87,.06)"
+    textColor: "{colors.ink}"
+    typography: "{typography.eyebrow}"
+    rounded: "{rounded.pill}"
+    padding: "9px 14px"
+  eyebrow-on-dark:
+    backgroundColor: "rgba(255,255,255,.12)"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.eyebrow}"
+    rounded: "{rounded.pill}"
+    padding: "9px 14px"
+  card:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.body}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.card-pad}"
+  field:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.field}"
+    padding: "13px 14px"
+    height: "52px"
+  day-chip:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    padding: "6px 10px"
+    height: "54px"
+  day-chip-selected:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.card}"
+  step-number:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+    typography: "{typography.title-xs}"
+    rounded: "{rounded.pill}"
+    size: "48px"
+  float-circle:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    size: "60px"
 ---
 
-# Design System: Hydro-Pro Quote Widget
+# Design System: Hydro-Pro Power Washing quote widget
 
 ## Overview
 
-**Creative North Star: "The Clean Stripe"**
+**Creative North Star: "Calm Bands in Their Own Colours"**
 
-Two systems share one file and must stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is a guest on someone else's website: it borrows hydropronj.com's language (their blue, a white card, pill buttons, uppercase tracked labels, Open Sans when the host has it) and adds nothing of its own. It is neutral and still, so it reads as if it was always part of their GoDaddy site. The **demo page** around it is the pitch to the owner: the same blue, pushed louder, with heavy uppercase headlines and one physical idea from the trade, a grimy surface coming clean under a pressure-wash stripe, on the owner's own hero photo.
+The page is Ellie's calm band style (house default since 2026-10-19, after lpmr.co.uk) coloured from the Hydro-Pro logo: full-bleed bands that alternate off-white paper, logo navy and a deeper navy with a faint diagonal line texture, so each new section is obvious without rules or dividers. One warm accent, the logo's gold, is used as a fill: buttons, step numbers, the floating text circle, the eyebrow dot. Everything is soft and borderless: 24px white cards, full pill buttons, tinted 10px fields.
 
-Both systems are built phone first. The base styles are the 360–430px layout and every larger size is an adaptation layered on top, because the owner will open the pitch on a phone and his customers will fill the widget on one. Phone values in this file are the primary steps of each scale; tablet and desktop values come second.
+Two systems share `index.html` and stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is pasted into the owner's GoDaddy site or iframed, so it carries its own `--hpq-*` tokens, its own fonts declaration and its own `<style>`; it never reads a page variable. The **page** around it uses the `:root` tokens. Both draw the same values, so they read as one brand.
 
-The page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash; the widget only changes state.
+Motion is limited to two moments: the hero H1 letters bounce in once, and content below the first screen fades up 12px. Everything is visible at rest, without JS and under reduced motion. The phone mock in the "What lands on your phone" preview copies iOS Messages greys; those belong to the imitation, not to this system.
 
 **Key Characteristics:**
-- Phone first: base CSS is the phone layout; `min-width` queries adapt up.
-- One hue (Hydro-Pro blue `#0d57db`) across both systems; everything else is neutral.
-- Pill buttons in matched pairs: filled primary, outlined ghost, same 56px height, same 2px outline.
-- Uppercase tracked labels name fields, buttons and panels.
-- Page headlines shout (800, uppercase, tight tracking); widget headings stay sentence case.
-- Ground is never black.
-- Signature: the wash canvas, the owner's photo under generated grime, washed by drag or by an idle wand.
+- Paper, navy, paper, deep navy, navy, deep navy: alternating full-bleed bands.
+- Logo gold as fill only; deeper gold ink when gold must be text on light.
+- Cal Sans display at weight 400 for every heading, label and button; system stack for running text.
+- 24px cards, 999px pills, 10px tinted borderless fields; no strokes at rest.
+- Site blue reserved for hover and focus outlines on light grounds.
+- One bounce-in (hero H1), one 12px fade-up, one floating 60px text circle.
 
 ## Colors
 
-A single-blue palette over cool, near-white neutrals; the widget uses warm-free greys so it sits on any host page.
+Paper and two navies carry the page; gold is the single warm accent, and the site blue appears only as an outline.
 
 ### Primary
-- **Hydro-Pro Blue** (`blue` / `hpq-accent`): their site's own blue. Page: filled buttons, links, ghost-button text and outline, the accent words in the hero headline, the "Easiest" chip text, the "Copied" confirmation. Widget: the send button, focus border, selected day chip, links, status line.
-- **Pressed Blue** (`blue-deep` / `hpq-accent-dark`): hover state of every filled button (hover-capable pointers only). Never used at rest.
-- **Harbor Navy** (`blue-ink`): page headlines, section titles, card titles, code text, the wash hint text, and the footer ground. The darkest surface the page ever uses.
+- **Logo Gold** (gold): the one accent. Fills only: primary pill buttons, step-number discs, the floating circle, eyebrow dots, text selection. Text on it is always Hydro Ink. On navy and deep bands it may also colour the last phrase of a heading.
+- **Pale Gold** (gold-2): hover fill of gold buttons, nothing else.
+- **Gold Ink** (gold-ink): gold as text or icon on light grounds (header phone icon and hover, accent phrases on paper), 5.4:1 on paper.
 
-### Neutral (demo page)
-- **Mist Ground** (`ground`): the page body. Every un-sectioned stretch of page sits on it.
-- **Paper** (`paper`): top bar, the "Try it" band, embed cards.
-- **Sky Wash** (`sky`): ghost-button hover fill and the "Easiest" chip.
-- **Slate Ink** (`ink`): body text. **Slate Soft** (`ink-soft`): secondary copy, section intros, the preview heading.
-- **Hairline** (`line`): 1px borders on the top bar, section bands and cards.
-- Code blocks sit on a blue-tinted panel (`#eef3fb`). Footer copy is pale blue (`#d7e3fa`, demo note `#a9bfe8`) on navy.
+### Secondary
+- **Logo Navy** (navy): hero band (under the photo overlay) and the closing band.
+- **Deep Navy** (deep): "How it works" band and footer, always with the diagonal line texture. The hero overlay is the same hue at 80–92%.
 
-### Intentional one-off literals
-These appear once each in the shipped CSS and are deliberate; reuse them for the same job, never as general palette.
-- **Selection Blue** (`selection`): `::selection` background, with Harbor Navy text.
-- **Focus Ring** (`focus-ring`): the page's global `:focus-visible` outline, 3px, 2px offset, with a 6px corner (`rounded.focus`) so bare links get a soft ring. Components with their own radius (pills, cards) keep it.
-- **Wash Fallback** (`wash-fallback`): grime olive painted behind the wash canvas, visible only before the photo and grime load. It is the reason the Never-Black rule holds even in the frame's empty state.
-- **Grime palette** (canvas only, never CSS): base `rgba(92,88,70,.82)`; blotch tones `rgb(70,78,46)`, `rgb(112,108,84)`, `rgb(52,58,40)`, `rgb(124,126,92)`, `rgb(96,84,58)`; drip streaks `rgb(44,50,32)`; speckles `rgba(40,44,30,.35)` and `rgba(150,150,120,.22)`; spray droplets `#ffffff` and `#e9f3ff`. These are the dirt, not the brand: they exist to be washed away and never appear outside the canvas.
+### Tertiary
+- **Site Blue** (blue): hydropronj.com's own blue. Hover and focus outlines on light grounds (page `:focus-visible`, widget fields, chips and buttons), and the widget's caret. Never a fill.
 
-### Messaging-app mimicry (not palette)
-The phone preview and the example text bubble copy a phone's own Messages app so the owner recognizes what lands on his phone. Their greys belong to that imitation, not to this system, and must not leak into page or widget UI.
-- Received bubble `#e9e9eb` with `#111` text; placeholder text in the bubble `#5a616d`.
-- Thread header `#f6f7f9` over a `#e9ecf1` rule; contact name `#222`; contact sub-line (11px), example label and timestamp (11px) in `#5a616d`, the same grey as the bubble placeholder.
-- Avatar disc `#68717f` with white initial; device bezel `#dfe6f1`; screen white.
-
-### Neutral (widget)
-- **Charcoal** (`hpq-ink`): all widget text, labels included.
-- **Grey Note** (`hpq-muted`): lede, "(optional)", day-chip dates, fine print.
-- **Field Stroke** (`hpq-line`): input and unselected day-chip borders. About 3:1 against white, the non-text contrast floor; it must not get lighter.
-- **White** (`hpq-bg`, `hpq-field`): card and field fills; separate knobs so a host can tint one without the other.
-- **Error Red** (`hpq-error`): invalid field border and error text only.
-- Card border `#dadada`; sent-message panel `#f6f6f6`; placeholders `#767676`; selected-chip date `#dbe7ff`.
+### Neutral
+- **Paper** (paper): page ground, field fill, code panel fill. The ground is never black.
+- **Card White** (card): cards and the widget surface.
+- **Hydro Ink** (ink): headings, labels, text on gold, selected day chip fill. At 6% alpha it is the eyebrow tint and the outlined button's hover.
+- **Body Slate** (body): running text on light.
+- **Soft Slate** (soft): ledes, notes, secondary text on light.
+- **On Dark** (on-dark) and **On Dark Soft** (on-dark-soft): headings and running text on navy bands.
+- **Placeholder Slate** (placeholder): field placeholders in the widget.
+- **On Ink Soft** (on-ink-soft): the date line inside a selected (ink) day chip.
+- **Error Red** (error): widget invalid-field outline and error sentences.
 
 ### Named Rules
-**The Never-Black Ground Rule.** The page ground is never black. Body sits on `ground`, bands on `paper`; the darkest surface anywhere is Harbor Navy in the footer. No `#000` or near-black section, card, or overlay; even the wash canvas fallback is grime olive, not black.
+**The Gold Is a Fill Rule.** Gold never sets text on a light ground; use Gold Ink there. On gold, text is Hydro Ink, never white.
 
-**The One Blue Rule.** Blue is the only hue in either system. The page climbs a three-step ladder (blue at rest, pressed blue on hover, navy for type and the footer); the widget uses only the first two. No second accent. Grime olive and messaging greys are depicted materials, not accents.
+**The Blue Is an Outline Rule.** Site Blue appears only as a 2–3px hover or focus outline (and the caret). On dark bands the focus outline switches to gold.
 
-**The Host Palette Rule.** Widget colors come only from `--hpq-*` variables declared on `#hpq-block`. No demo-page token (`--blue`, `--ink`, `--ground`) is ever referenced inside the block, so pasting it into GoDaddy carries everything it needs and nothing else.
+**The Two Token Sets Rule.** Widget colours live in `--hpq-*` on `#hpq-block` (accent, accent-2, ink, text, muted, field, bg, focus, error) and duplicate the page values by hand. Never make the widget read a `:root` variable; it must survive being pasted alone.
 
 ## Typography
 
-**Display Font:** Open Sans (their site's face), with system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial
-**Body Font:** same stack
-**Label/Mono Font:** ui-monospace, SFMono-Regular, Menlo, Consolas (code blocks only)
+**Display Font:** Cal Sans (with Avenir Next, Segoe UI, system-ui)
+**Body Font:** system stack (-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial)
+**Label/Mono Font:** ui-monospace stack, only in the embed code panels
 
-**Character:** One sans family, two temperaments. On the page it shouts: heavy, uppercase, tight. Inside the widget it speaks plainly in sentence case, with only labels and buttons tracked out. Neither file loads Open Sans; on the host site it is picked up when present, and on the standalone demo the stack falls through to the system face.
+**Character:** One friendly geometric display face at regular weight carries every heading, field label, step title, button and the header phone number; the system stack does all reading at 16/1.7.
 
-### Hierarchy (demo page), phone first
-- **Display** (800, uppercase, `clamp(34px,9.6vw,72px)`, 0.98, -0.02em, balanced wrap): the hero headline only, in navy with the payoff words in blue. On a 360px phone it sets at 34.6px and fills the width in two to three lines; it reaches 72px at desktop. 10px below it on phones, 16px from 900px.
-- **Headline** (800, uppercase, `clamp(28px,3.4vw,42px)`, 1.05, -0.01em): one per section; 28px on every phone.
-- **Title** (800, uppercase, 20px, -0.01em): card titles in the embed section, all sizes.
-- **Pitch** (400, `clamp(17px,1.6vw,20px)`, 1.42, max 36ch): the one-line pitch under the hero headline; 17px on phones.
-- **Body** (400, 16px, 1.55): running copy; section intros cap at 60ch. The hero sub-line (44ch) is hidden on phones and appears from 600px.
-- **Label** (700, 14px, 0.12em, uppercase): every page button, phone and desktop alike.
-- **Phone link** (700, 16px on phones, 17px from 600px, navy, no tracking): the top-bar `tel:` number.
-- **Preview heading** (700, uppercase): The preview heading is 13px / 0.14em.
-- **Secondary small copy**: preview caption 15px on phones, 14px from 900px; "Copied" confirmation 15px/600 in blue.
-
-### Hierarchy (widget), phone first
-The widget type ramp does not change with width; only spacing and layout do.
-- **Title** (700, 24px, 1.2, sentence case, no tracking): "Get a fast quote", "Your text is ready".
-- **Lede** (400, 15px, muted): one line under the title.
-- **Body / Field** (400, 16px, 1.4–1.5): field text. 16px is a floor so iOS does not zoom on focus.
-- **Label** (700, 12px, 0.1em, uppercase): field labels and the day legend.
-- **Button** (700, 14px, 0.14em, uppercase).
-- **Fine** (400, 14px, 1.5, centered, muted): service area, hours. Error messages, status line, the copied-text panel and the text link are also 14px.
+### Hierarchy
+- **Display** (400, clamp 40–80px, 1.02): hero H1 only, max 13ch.
+- **Headline** (400, clamp 30–48px, 1.08): section H2s. The widget's H2 is a fixed 30px so it fits a host column.
+- **Title** (400, 24px / 22px / 21px): embed card titles, the preview heading, step titles (22px from 1024px).
+- **Title XS** (400, 20px): footer name, step numbers, header phone on desktop.
+- **Button / Label** (Cal Sans 400, 18px / 17px): pill buttons; widget field labels and legends.
+- **Lead / Lede** (system, clamp 17–20px, 1.5; clamp 17–19px): the hero promise (34ch) and section ledes (40ch), in Soft Slate or On Dark Soft.
+- **Body** (system 400, 16px, 1.7): running text; every input is 16px so iOS does not zoom.
+- **Body small** (15px, 1.5): notes, error sentences, the widget fine print, copy status.
+- **Eyebrow** (system 500, 14px, 0.02em): eyebrow pills only. Also the "(optional)" tag.
+- **Caption / Code** (13px): day-chip dates; embed code panels.
 
 ### Named Rules
-**The Two Voices Rule.** Page headings are 800 uppercase with negative tracking; widget headings are 700 sentence case with zero tracking and explicitly reset `text-transform`. A widget heading that shouts would fight the host site's own headings.
+**The Regular Display Rule.** Cal Sans is always weight 400 with -0.005em tracking and `text-wrap: balance` on headings. No uppercase, no bold display.
 
-**The Labels Label Rule.** Tracked uppercase small text always names something concrete: a field, a button, a panel, a chip, a footer business name. It never sits above a headline as a kicker.
-
-**The Thumb-Size Text Rule.** Interactive text is 14px or larger on phones: button labels, fine print, links and status lines. Only labels that name a field (12px) and messaging-app mimicry go smaller.
+**The Place in the H1 Rule.** The hero H1 names the town; its last phrase is the gold accent.
 
 ## Layout
 
-Phone first. Base CSS is the 360–430px layout; `min-width:600px` adapts for large phones and small tablets, `min-width:900px` for desktop. The widget carries its own single step at `min-width:481px`. The wash script halves spray density under 520px wide.
-
-**Container:** centered `wrap`, 1180px max, 20px gutters at every width.
-
-**Phones (base):** one column throughout. The hero stacks copy, then the wash, then the action buttons, so the photo is in the first viewport and the buttons follow it. Hero action buttons stack full width with 10px between. Hero padding 18px top / 30px bottom, 16px between hero rows; the wash frame keeps 22px below it for the overlapping example bubble. Sections pad 44px top / 52px bottom. The widget and preview stack with 40px between; the embed cards stack with 20px between. The footer pads 36px top / 40px bottom; there is no sticky bottom bar to clear.
-
-**600px and up:** the hero sub-line appears; hero buttons sit side by side (flex, 12px gap, wrapping); the wash becomes 4:3. Sections open to 64px top (72px bottom on "Try it"); embed cards pad 28px and their buttons shrink to content width. The top bar grows to 72px. The phone mock widens to 310px.
-
-**900px and up:** the hero becomes two columns (copy and actions in `1fr` on the left, wash in `1.15fr` on the right spanning both rows, 48px column gap, 26px row gap, bottom-aligned); hero padding 44/56px. "Try it" becomes the widget (max 560px) beside a sticky phone preview (top 24px), 56px gap. Embed cards go two up, 28px gap. Footer pads 40/48px.
-
-Bands alternate grounds: hero on `ground`, "Try it" on `paper` with hairlines top and bottom, embed back on `ground`, footer on navy.
-
-**Widget, phone (base):** card padding 22px / 18px; name and phone fields stack; day chips run three per row; the phone number is hidden from the "Text us instead" button. **481px and up:** card padding 28px; name and phone sit side by side with a 14px column gap; day chips share one row; the number shows.
-
-Widget rhythm (all widths): 16px between fields, 6px label-to-field, 8px between day chips, 22px below the lede and above the button stack, 10px between buttons, 14px above fine print.
-
-### Named Rules
-**The Phone Is The Base Rule.** Write the phone layout as the unqualified CSS and adapt upward with `min-width` queries. A desktop rule undone by a `max-width` query is a regression.
+Phone first. A single 1160px wrap with a 20px gutter (40px from 760px). Bands pad 64px vertically on phones, 96px from 760px. Section heads are a left-aligned grid (16px gap, max 640px) of eyebrow, H2 and lede. The try section is one column until 1024px, then the 560px widget beside the sticky phone preview (64px gap). Steps go from a stacked list to three columns at 1024px; the two embed cards sit side by side at 1024px. Hero actions stack full width on phones and sit in a row (min 240px each) from 760px. Hover styles are behind `(hover:hover)`. Breakpoints: 481px (widget), 760px, 1024px.
 
 ## Elevation & Depth
 
-Soft lift, never hard. Shadows use a negative spread so they pool under an element rather than haloing it, and on the page they are tinted navy (`rgba(3,43,116,…)`), never grey or black. Flat elsewhere: cards and bands separate with 1px hairlines, not shadows.
+Flat. Depth comes from band colour changes and white cards on paper, not shadows. The only shadow is the floating text circle's soft navy lift, because it floats over content.
 
 ### Shadow Vocabulary
-- **Hero lift** (`0 20px 40px -22px rgba(3,43,116,.45), 0 4px 12px rgba(3,43,116,.12)`): the wash canvas, all widths.
-- **Floating bubble** (`0 14px 30px -16px rgba(3,43,116,.55), 0 3px 10px rgba(3,43,116,.14)`): the example text overlapping the photo.
-- **Device** (`0 30px 60px -30px rgba(3,43,116,.5), 0 6px 18px rgba(3,43,116,.1)`): the phone mock.
-- **Pill hint** (`0 6px 16px -6px rgba(3,43,116,.35)`): the "Swipe to wash it" / "Drag to wash it" hint pill.
-- **Widget card** (`0 18px 40px -26px rgba(27,27,27,.35)`): neutral grey, because the widget must sit on any host ground.
+- **Float lift** (`box-shadow: 0 10px 28px rgba(8,31,77,.3)`): the floating text circle only.
 
 ### Named Rules
-**The Tinted Lift Rule.** Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone). Cards and sections use hairlines.
+**The No Stroke at Rest Rule.** Cards, fields and chips carry no border at rest; a transparent 2px border exists only so hover, focus and error can colour it without layout shift.
 
 ## Shapes
 
-Round and friendly. Every button is a full pill (999px) with a 2px outline in the accent, filled or not. The radius scale, phone value first:
-- **Wash frame:** 18px on phones, 22px from 600px.
-- **Widget card:** 14px on phones, 16px from 481px.
-- **Page cards:** 16px at all widths. **Code blocks:** 12px.
-- **Widget fields and day chips:** one shared 10px radius; the sent-message panel uses it too.
-- **Focus ring:** 6px corner on the global page ring.
-- **Message bubbles** (mimicry): the messaging tail shape, rounded on three corners with a 6px bottom-left. The example bubble is 16px on phones and 18px from 900px; the preview bubble is 18px.
-- **Phone mock:** 44px outer, 34px screen; avatar a full circle.
+Soft and round. Cards 24px, fields and code panels 10px, buttons, chips, eyebrows and step discs fully round. Focus rings use a 6px radius (round on the circle). Deep bands carry a 135° line texture: 1px lines of white at 3.5% every 23px (`repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.035) 22px 23px)`), faint enough never to read as lines through text.
 
 ## Components
 
 ### Buttons
-Confident pills, always in a matched pair, sized for thumbs.
-- **Shape:** full pill, 2px accent outline on every variant.
-- **Primary:** filled blue, white uppercase tracked label (14px). Page: 56px tall, 24px side padding, full width when stacked on phones, content width from 600px. Widget: 56px, full width at every size.
-- **Ghost / Alt:** transparent with blue text and outline; hover fills with sky (page) or 7% blue (widget).
-- **Hover / Press:** hover applies only on hover-capable pointers (`@media (hover:hover)`), so a tap never leaves a stuck hover state; primary darkens to pressed blue (fill and outline). Press scales to 0.97 (page) or 0.98 (widget). Tap highlight is suppressed. Transitions 0.15–0.2s.
-- **Focus:** page uses the global focus ring; widget uses a 3px 40%-blue outline, 2px offset.
-- **Widget hover outline:** on hover-capable pointers, widget buttons and text links gain a 2px 45%-blue outline at 2px offset, on top of their fill change.
-- **Icons:** inline stroke SVG (2px stroke, round caps), 20px on page buttons, 18px in the widget, 10px gap.
+- **Shape:** full pill (999px), 56px tall, 26px side padding, Cal Sans 18px, 2px border.
+- **Primary:** gold fill, ink text, gold border. Hover pale gold.
+- **Ghost (on dark):** transparent, On Dark text, 70% On Dark border; hover full white border and 10% white fill.
+- **Line (on light):** transparent, ink text and border; hover 6% ink tint.
+- **Press:** scale(.98) over 120ms. Widget buttons also take a 2px Site Blue outline on hover and focus.
+- At most two buttons in the hero: one gold, one ghost. No Call button; the number lives in the header.
 
-### Chips
-- **Day chip (widget):** radio styled as a 52px tile, 10px radius, field-stroke border, weekday 14px/600 over a 12px muted date. Three per row on phones, one even row from 481px. Hover (hover-capable pointers) turns the border blue; selected fills blue with white text; keyboard focus shows a 3px 30%-blue ring.
-- **Best chip (page):** small sky pill with blue 11px tracked text, inline after a card title.
+### Eyebrow pills (sanctioned)
+- **Style:** 14px system 500 label in a 6% ink pill (12% white on dark), 9px 14px padding, 7px gold dot before it.
+- **Use:** above the hero H1, the widget title and a few section heads, never every heading. Marked up as `<span>`/`<p>`, never a heading. No arrow, no hover, no shadow, no full gold fill, so it cannot read as a button.
+- Owner's choice (Ellie, calm-photo-style.md, 2026-10-19); the design hook's eyebrow/kicker rules are ignored for `index.html` on that basis.
+
+### Chips (widget day picker)
+- **Style:** pill, 54px tall, paper fill, ink 15px 600 day over a 13px muted date.
+- **State:** selected fills ink with white text and On Ink Soft date; hover and keyboard focus outline Site Blue.
 
 ### Cards / Containers
-- **Embed card:** paper, 1px hairline, 16px radius, 22px / 18px padding on phones, 28px from 600px, no shadow.
-- **Widget card:** white, `#dadada` 1px border, neutral widget-card shadow, max 560px; 14px radius and 22px / 18px padding on phones, 16px and 28px from 481px.
-- **Code block:** blue-tinted panel, 12px radius, 14px padding, navy monospace 13px, wrapping, capped at 420px tall with its own scroll.
+- **Corner Style:** 24px.
+- **Background:** Card White on paper.
+- **Shadow Strategy:** none (see Elevation).
+- **Border:** none.
+- **Internal Padding:** 24px 20px on phones, 32px from 481px (widget) / 760px (embed cards).
 
 ### Inputs / Fields
-- **Style:** 48px min height (76px textarea), 11px/14px padding, 1px field-stroke border, 10px radius, white fill, 16px text. Select carries an inline chevron SVG at right 14px.
-- **Hover** (hover-capable pointers): border turns blue plus a lighter 3px 12%-blue ring.
-- **Focus:** border turns blue plus a 3px 22%-blue glow; no outline.
-- **Error:** border turns error red; a 14px red message appears below and is linked by `aria-describedby` only while invalid.
-- **Text link** (widget, "Edit"-style): 14px/600 blue underlined, 44px min tap height.
-- **No email in the widget:** contact inside the widget is text and phone only; the business email appears once, in the page footer.
+- **Style:** paper fill, no visible border, 10px radius, 52px min height, 16px text in ink; selects carry an ink chevron.
+- **Focus / Hover:** 2px Site Blue border.
+- **Error:** 2px Error Red border plus a plain-sentence message below in 15px red.
 
 ### Navigation
-- **Top bar:** paper with a hairline bottom. Phones: 58px tall, logo 34px, the phone number top right as a 16px/700 navy `tel:` link (44px tap height; underlined blue on hover). From 600px: 72px, logo 44px, number 17px. The number appears only here on the first screen. No sticky bottom bar (removed 2026-10-17, finishing rules).
+- Slim paper header: logo left (34px, 44px from 760px), Cal Sans tap-to-call number right with a Gold Ink phone icon, gold-ink on hover. 64px tall (76px from 760px). No menu.
 
-### Wash Canvas (signature)
-The owner's own hero photo (never stock) under a generated grime layer that the visitor pressure-washes clean.
-- **Frame:** 16:10 with an 18px radius on phones, 4:3 with 22px from 600px; hero lift shadow; grime-olive fallback ground; crosshair cursor; `touch-action: none` so drags wash in every direction (page scrolls outside the photo); `overscroll-behavior-y: none` on html stops pull-to-refresh; text selection and touch callout disabled.
-- **Layers:** photo (`object-position` 50% 45%), grime canvas (grime minus a "clean mask"), spray canvas.
-- **Grime:** the grime palette above: an olive-brown base with radial blotches in five tones, 90 dark drip streaks, 2600 speckles. Seeded random, so the grime is identical every load.
-- **Opening state:** one clean diagonal double stripe, the classic first pass, so the first viewport is half washed.
-- **Tunable constants** (top of the wash IIFE): `BRUSH` 0.075 of width, `BRUSH_STRENGTH` 0.55 (two passes ≈ spotless), `REGRIME_EVERY` 30 frames, `REGRIME_ALPHA` 0.02 (~17s half-life), `IDLE_AFTER` 2200ms, `WAND_SPEED` 1.0, `SPRAY_PER_FRAME` 7 (halved under 520px). The idle wand washes at 70% strength on layered sines.
-- **Spray:** white and pale-blue droplets with gravity and drag, capped at 600.
-- **Overlays:** the hint pill (white 92%, navy 13px/700) sits top left on phones and bottom left from 900px, reads "Swipe to wash it" on touch and "Drag to wash it" on fine pointers, and lifts away on first touch. The example text bubble overlaps the bottom-right corner: on phones 10px in from the right, 26px below the frame, max 205px, 12px text; from 900px it hangs 18px past the right edge, max 250px, 13px text.
-- **Restraint:** pauses off-screen; under reduced motion there is no loop, no spray, no wand, and washing still works by direct drag.
+### Hero H1 bounce-in (sanctioned)
+Hero H1 only. JS splits letters (words kept `nowrap`); each letter goes from `opacity:0; translateX(50px)` to rest over 1s on `cubic-bezier(.34,1.56,.64,1)`, 20ms apart. The overshoot is the bounce, an owner's choice. The heading carries `aria-label` while split and the plain HTML is restored on the last `animationend`. Skipped entirely under reduced motion and without JS.
 
-### Phone Preview
-A plain messaging mock that mirrors the widget's exact text as the visitor types, driven by the widget's `hpq:change` event. 280px wide with a 300px screen on phones, 310px / 470px from 600px, sticky beside the widget from 900px. Its colors are messaging-app mimicry (see Colors), on purpose.
+### Fade-up
+Elements marked to rise that start below the first screen move up 12px and fade in over 400ms ease-out on intersection. Nothing above the fold is ever hidden.
+
+### Floating text circle
+60px gold circle with a chat icon, fixed bottom-right (16px plus safe area), opens `sms:` with a prefilled line. Slides in once the hero scrolls away and hides while the quote form is on screen (`tabIndex=-1`, `aria-hidden` when hidden). One circle, never a bottom bar. Transition 350ms `cubic-bezier(.2,.8,.2,1)`.
+
+### Step list
+Numbered gold discs (48px, Cal Sans 20px ink) beside a Cal Sans step title and a one-line body, on the deep textured band.
+
+### Phone preview (mimicry)
+A 280px (310px desktop) rounded device frame holding an iOS Messages thread that mirrors the widget's text live. Its greys, 44px/34px frame radii, 18px bubble radius and 11–13.5px type copy Messages and are sanctioned only inside this mock.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** write phone styles as the base and adapt up with `min-width` (600px, 900px; 481px inside the widget).
-- **Do** keep the page ground at Mist Ground and the darkest surface at Harbor Navy; the ground is never black.
-- **Do** scope every widget selector under `#hpq-block` and route every widget color through a `--hpq-*` variable, so a restyle is a variable edit.
-- **Do** ship buttons as pairs: same 56px height, same 2px outline, filled primary beside outlined ghost.
-- **Do** gate hover styles behind `@media (hover:hover)`.
-- **Do** set page headings in 800 uppercase with negative tracking and widget headings in 700 sentence case.
-- **Do** keep widget field text at 16px or larger and interactive text at 14px or larger.
-- **Do** tint page shadows navy with negative spread, and only on elements that float.
-- **Do** run the wash over the client's own photo and tune it through the named constants, not by editing the loop.
-- **Do** keep field strokes at 3:1 or better against the card; the shipped `hpq-line` sits at that floor, so don't lighten it.
+- **Do** alternate full-bleed bands (paper, navy, deep navy with the line texture) so each section is obvious.
+- **Do** use gold as a fill with ink text, and Gold Ink when gold must be text on light.
+- **Do** keep every interactive target 44px or more, every input 16px or more.
+- **Do** keep the widget self-contained: its own `--hpq-*` tokens, `@import` for Cal Sans and system fallbacks, no page variables.
+- **Do** keep the line texture at 3.5% white or fainter.
+- **Do** keep motion to the hero bounce-in and the 12px fade-up, and keep everything visible under reduced motion and without JS.
 
 ### Don't:
-- **Don't** put a black or near-black ground behind any section, card, or overlay.
-- **Don't** animate anything inside the widget beyond 0.15s state transitions and the press scale; all motion belongs to the demo page.
-- **Don't** reference demo-page tokens or load fonts or assets from inside `#hpq-block`; it must paste into GoDaddy whole.
-- **Don't** add a second accent hue to either system, and don't borrow the grime olives or the messaging greys as UI color.
-- **Don't** place a tracked uppercase line above a headline as a kicker; tracked labels name things.
-- **Don't** use grey or black drop shadows on the page, or hard offset shadows anywhere.
-- **Don't** run the wash over stock or generated house imagery.
+- **Don't** put white text on gold or gold text on paper.
+- **Don't** use Site Blue as a fill or a second accent.
+- **Don't** give the letter bounce to any heading but the hero H1.
+- **Don't** add borders or shadows to cards, fields or chips at rest.
+- **Don't** make an eyebrow look like a button (arrow, hover, shadow, solid gold) or put one above every heading.
+- **Don't** use the phone mock's greys or radii anywhere outside the mock.
+- **Don't** use a black ground anywhere.

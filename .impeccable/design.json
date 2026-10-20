@@ -1,713 +1,627 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T00:00:00+00:00",
-  "title": "Design System: Hydro-Pro Quote Widget",
+  "generatedAt": "2026-10-20T00:54:14.102159+00:00",
+  "title": "Design System: Hydro-Pro Power Washing quote widget",
   "extensions": {
     "colorMeta": {
-      "blue": {
-        "role": "primary",
-        "displayName": "Hydro-Pro Blue",
-        "canonical": "#0d57db",
-        "system": "page",
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "purpose": "Page ground, field fill. Widget: --hpq-field.",
+        "canonical": "#f4f6fb",
         "tonalRamp": [
-          "#030a1d",
-          "#092250",
-          "#113c8b",
-          "#1a57ca",
-          "#3d7cf1",
-          "#73a4fc",
-          "#a8caff",
-          "#dfefff"
+          "#141f38",
+          "#233561",
+          "#324b8a",
+          "#4162b4",
+          "#6985c9",
+          "#96a9d9",
+          "#c3cee9",
+          "#ecf0f8"
         ]
       },
-      "blue-deep": {
-        "role": "primary",
-        "displayName": "Pressed Blue",
-        "canonical": "#073fa3",
-        "system": "page",
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "purpose": "Cards and widget surface. Widget: --hpq-bg.",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "#040b19",
-          "#102348",
-          "#1e3f7d",
-          "#2c5cb5",
-          "#4d7fdc",
-          "#7da5eb",
-          "#afcafa",
-          "#e2efff"
-        ]
-      },
-      "blue-ink": {
-        "role": "primary",
-        "displayName": "Harbor Navy",
-        "canonical": "#032b74",
-        "system": "page",
-        "tonalRamp": [
-          "#050b16",
-          "#152440",
-          "#274170",
-          "#3a5fa3",
-          "#5a81c8",
-          "#86a6dc",
-          "#b5caef",
-          "#e5efff"
+          "#262626",
+          "#424242",
+          "#5e5e5e",
+          "#7a7a7a",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Slate Ink",
-        "canonical": "#1f2733",
-        "system": "page",
+        "displayName": "Hydro Ink",
+        "purpose": "Headings, labels, text on gold, selected chip. Widget: --hpq-ink.",
+        "canonical": "#0b2457",
         "tonalRamp": [
-          "#0a0b0d",
-          "#22252a",
-          "#3d424b",
-          "#5a626e",
-          "#7a8390",
-          "#9fa6b0",
-          "#c5c9d0",
-          "#eceff2"
+          "#091c44",
+          "#0f3176",
+          "#1545a8",
+          "#1b5ad9",
+          "#4a7ee8",
+          "#80a5ef",
+          "#b7cbf6",
+          "#e8effc"
         ]
       },
-      "ink-soft": {
+      "body": {
         "role": "neutral",
-        "displayName": "Slate Soft",
-        "canonical": "#4a5463",
-        "system": "page",
+        "displayName": "Body Slate",
+        "purpose": "Running text on light. Widget: --hpq-text.",
+        "canonical": "#2a3a4f",
         "tonalRamp": [
-          "#0a0b0e",
-          "#22252b",
-          "#3c424c",
-          "#596270",
-          "#798391",
-          "#9ea6b1",
-          "#c4c9d1",
-          "#eceff2"
+          "#1b2532",
+          "#2e4057",
+          "#415a7b",
+          "#5575a0",
+          "#7a95b8",
+          "#a2b5cd",
+          "#cad5e3",
+          "#eef2f6"
         ]
       },
-      "line": {
+      "soft": {
         "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "#dfe4ec",
-        "system": "page",
+        "displayName": "Soft Slate",
+        "purpose": "Ledes and secondary text. Widget: --hpq-muted.",
+        "canonical": "#4a5870",
         "tonalRamp": [
-          "#080b10",
-          "#22252b",
-          "#3e4249",
-          "#5d6168",
-          "#7e838a",
-          "#a1a5ad",
-          "#c5c9d1",
-          "#eaeff7"
+          "#1e242e",
+          "#353f50",
+          "#4b5972",
+          "#617493",
+          "#8494ae",
+          "#a9b4c6",
+          "#ced4df",
+          "#f0f2f5"
         ]
       },
-      "ground": {
+      "navy": {
+        "role": "secondary",
+        "displayName": "Logo Navy",
+        "purpose": "Hero and closing bands.",
+        "canonical": "#0a3d99",
+        "tonalRamp": [
+          "#051d48",
+          "#08327c",
+          "#0c47b1",
+          "#0f5ce6",
+          "#407ff2",
+          "#79a6f6",
+          "#b2ccfa",
+          "#e7effd"
+        ]
+      },
+      "deep": {
+        "role": "secondary",
+        "displayName": "Deep Navy",
+        "purpose": "How-it-works band and footer, with the diagonal line texture; hero overlay hue.",
+        "canonical": "#081f4d",
+        "tonalRamp": [
+          "#071c45",
+          "#0c3078",
+          "#1245ab",
+          "#1759de",
+          "#467dec",
+          "#7ea4f2",
+          "#b5cbf7",
+          "#e8effd"
+        ]
+      },
+      "on-dark": {
         "role": "neutral",
-        "displayName": "Mist Ground",
-        "canonical": "#f4f7fb",
-        "system": "page",
+        "displayName": "On Dark",
+        "purpose": "Headings and links on navy bands.",
+        "canonical": "#f4f7fc",
         "tonalRamp": [
-          "#090b0e",
-          "#232528",
-          "#404245",
-          "#5f6165",
-          "#808286",
-          "#a2a5a9",
-          "#c6c9cd",
-          "#eceff3"
+          "#10213c",
+          "#1c3968",
+          "#285194",
+          "#3469c0",
+          "#5f8ad3",
+          "#8fade0",
+          "#bfd0ee",
+          "#ebf0fa"
         ]
       },
-      "paper": {
+      "on-dark-soft": {
         "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#ffffff",
-        "system": "page",
+        "displayName": "On Dark Soft",
+        "purpose": "Running text on navy bands.",
+        "canonical": "#cbd8ee",
         "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
+          "#13213a",
+          "#213a64",
+          "#2e528e",
+          "#3c6ab8",
+          "#658ccd",
+          "#93aedc",
+          "#c2d1eb",
+          "#ecf1f9"
         ]
       },
-      "sky": {
-        "role": "neutral",
-        "displayName": "Sky Wash",
-        "canonical": "#e8f0fd",
-        "system": "page",
-        "tonalRamp": [
-          "#070b13",
-          "#20252f",
-          "#3c424d",
-          "#5b626d",
-          "#7c838e",
-          "#9ea6b2",
-          "#c2cad6",
-          "#e7effc"
-        ]
-      },
-      "selection": {
-        "role": "utility",
-        "displayName": "Selection Blue",
-        "canonical": "#cfe0ff",
-        "system": "page",
-        "oneOff": true,
-        "purpose": "One-off: ::selection background with navy text.",
-        "tonalRamp": [
-          "#020a18",
-          "#061d47",
-          "#0a347f",
-          "#0f4dbd",
-          "#2169ed",
-          "#5f93f2",
-          "#a1bff7",
-          "#dee9fc"
-        ]
-      },
-      "focus-ring": {
-        "role": "utility",
-        "displayName": "Focus Ring",
-        "canonical": "#7aa7f7",
-        "system": "page",
-        "oneOff": true,
-        "purpose": "One-off: global page :focus-visible outline, 3px, 2px offset, 6px corner.",
-        "tonalRamp": [
-          "#020a18",
-          "#061d47",
-          "#0a347f",
-          "#0f4ebd",
-          "#216bed",
-          "#5f94f2",
-          "#a1c0f7",
-          "#dee9fc"
-        ]
-      },
-      "wash-fallback": {
-        "role": "utility",
-        "displayName": "Wash Fallback Olive",
-        "canonical": "#6b7458",
-        "system": "page",
-        "oneOff": true,
-        "purpose": "One-off: ground behind the wash canvas before photo and grime load; keeps the frame never-black.",
-        "tonalRamp": [
-          "#0d0e0b",
-          "#282b21",
-          "#484e3b",
-          "#6b7458",
-          "#8d9877",
-          "#adb49c",
-          "#ced3c5",
-          "#eef0eb"
-        ]
-      },
-      "hpq-accent": {
+      "gold": {
         "role": "primary",
-        "displayName": "Hydro-Pro Blue (widget)",
+        "displayName": "Logo Gold",
+        "purpose": "Fill-only accent: primary buttons, step discs, float circle, eyebrow dots. Widget: --hpq-accent.",
+        "canonical": "#f0c24b",
+        "tonalRamp": [
+          "#473506",
+          "#7a5b0a",
+          "#ae820f",
+          "#e2a813",
+          "#efbf43",
+          "#f4d27b",
+          "#f9e5b4",
+          "#fdf7e7"
+        ]
+      },
+      "gold-2": {
+        "role": "primary",
+        "displayName": "Pale Gold",
+        "purpose": "Hover fill of gold buttons. Widget: --hpq-accent-2.",
+        "canonical": "#f6d272",
+        "tonalRamp": [
+          "#483605",
+          "#7d5d08",
+          "#b1840b",
+          "#e6ab0f",
+          "#f3c23f",
+          "#f6d479",
+          "#fae7b2",
+          "#fdf7e7"
+        ]
+      },
+      "gold-ink": {
+        "role": "primary",
+        "displayName": "Gold Ink",
+        "purpose": "Gold as text or icon on light grounds (5.4:1 on paper).",
+        "canonical": "#85601a",
+        "tonalRamp": [
+          "#402e0d",
+          "#6f5016",
+          "#9e721f",
+          "#cd9428",
+          "#deae54",
+          "#e8c688",
+          "#f2dfbb",
+          "#fbf5ea"
+        ]
+      },
+      "blue": {
+        "role": "tertiary",
+        "displayName": "Site Blue",
+        "purpose": "hydropronj.com blue: hover/focus outlines and caret only. Widget: --hpq-focus.",
         "canonical": "#0d57db",
-        "system": "widget",
         "tonalRamp": [
-          "#030a1d",
-          "#092250",
-          "#113c8b",
-          "#1a57ca",
-          "#3d7cf1",
-          "#73a4fc",
-          "#a8caff",
-          "#dfefff"
+          "#041d48",
+          "#07327d",
+          "#0b47b2",
+          "#0e5ce7",
+          "#3e80f4",
+          "#78a6f7",
+          "#b2ccfa",
+          "#e7effe"
         ]
       },
-      "hpq-accent-dark": {
-        "role": "primary",
-        "displayName": "Pressed Blue (widget)",
-        "canonical": "#073fa3",
-        "system": "widget",
-        "tonalRamp": [
-          "#040b19",
-          "#102348",
-          "#1e3f7d",
-          "#2c5cb5",
-          "#4d7fdc",
-          "#7da5eb",
-          "#afcafa",
-          "#e2efff"
-        ]
-      },
-      "hpq-ink": {
+      "error": {
         "role": "neutral",
-        "displayName": "Charcoal",
-        "canonical": "#303030",
-        "system": "widget",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
-        ]
-      },
-      "hpq-muted": {
-        "role": "neutral",
-        "displayName": "Grey Note",
-        "canonical": "#5e5e5e",
-        "system": "widget",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
-        ]
-      },
-      "hpq-line": {
-        "role": "neutral",
-        "displayName": "Field Stroke",
-        "canonical": "#949494",
-        "system": "widget",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
-        ]
-      },
-      "hpq-field": {
-        "role": "neutral",
-        "displayName": "Field White",
-        "canonical": "#ffffff",
-        "system": "widget",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
-        ]
-      },
-      "hpq-bg": {
-        "role": "neutral",
-        "displayName": "Card White",
-        "canonical": "#ffffff",
-        "system": "widget",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#a5a5a5",
-          "#c9c9c9",
-          "#eeeeee"
-        ]
-      },
-      "hpq-error": {
-        "role": "error",
         "displayName": "Error Red",
-        "canonical": "#b42318",
-        "system": "widget",
+        "purpose": "Widget invalid outline and error sentences. Widget: --hpq-error.",
+        "canonical": "#b3261e",
         "tonalRamp": [
-          "#180504",
-          "#44120c",
-          "#752017",
-          "#aa2f23",
-          "#d15445",
-          "#e68778",
-          "#f8b7ac",
-          "#ffe6e0"
+          "#420e0b",
+          "#721813",
+          "#a2221b",
+          "#d22d23",
+          "#e25850",
+          "#eb8a85",
+          "#f3bcb9",
+          "#fbeae9"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Slate",
+        "purpose": "Widget field placeholders.",
+        "canonical": "#5f6b80",
+        "tonalRamp": [
+          "#21252c",
+          "#38404c",
+          "#505b6c",
+          "#68758d",
+          "#8a95a8",
+          "#adb5c2",
+          "#d0d5dc",
+          "#f0f2f4"
+        ]
+      },
+      "on-ink-soft": {
+        "role": "neutral",
+        "displayName": "On Ink Soft",
+        "purpose": "Date line inside a selected day chip.",
+        "canonical": "#dbe4f5",
+        "tonalRamp": [
+          "#11203c",
+          "#1d3768",
+          "#294e94",
+          "#3565c0",
+          "#5f87d3",
+          "#8fabe0",
+          "#bfcfed",
+          "#ebf0f9"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Demo page hero headline only; uppercase. clamp(34px,9.6vw,72px): ~34.6px on a 360px phone, 72px at desktop."
+        "purpose": "Hero H1 only; letter bounce-in."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Demo page section titles; uppercase."
+        "purpose": "Section H2s."
+      },
+      "headline-widget": {
+        "displayName": "Widget Headline",
+        "purpose": "Widget H2, fixed so it fits a host column."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Demo page card titles; uppercase."
+        "purpose": "Embed card titles."
       },
-      "pitch": {
-        "displayName": "Pitch",
-        "purpose": "One-line pitch under the hero headline; 17px on phones, up to 20px."
+      "title-sm": {
+        "displayName": "Title Small",
+        "purpose": "Preview heading; step titles on desktop."
       },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Demo page running copy."
+      "title-step": {
+        "displayName": "Step Title",
+        "purpose": "Step titles on phones."
+      },
+      "title-xs": {
+        "displayName": "Title XS",
+        "purpose": "Footer name, step numbers, header phone on desktop."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Pill buttons (page and widget)."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Every demo page button label, 14px at all widths; uppercase tracked."
+        "purpose": "Widget field labels and legends; header phone on phones."
       },
-      "tel-phone": {
-        "displayName": "Phone Link (phone)",
-        "purpose": "Top-bar tel: number on phones: 16px/700 navy, no tracking, 44px tap height."
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero promise; closing line."
       },
-      "tel": {
-        "displayName": "Phone Link",
-        "purpose": "Top-bar tel: number from 600px: 17px/700 navy."
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section ledes."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; all inputs."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Notes, errors, fine print, status."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "purpose": "Eyebrow pills; optional tag."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Day-chip dates."
       },
       "code": {
         "displayName": "Code",
-        "purpose": "Embed code blocks."
-      },
-      "hpq-title": {
-        "displayName": "Widget Title",
-        "purpose": "Widget headings; sentence case, no tracking."
-      },
-      "hpq-body": {
-        "displayName": "Widget Body",
-        "purpose": "Widget field text; 16px floor."
-      },
-      "hpq-label": {
-        "displayName": "Widget Label",
-        "purpose": "Field labels and legend; uppercase tracked."
-      },
-      "hpq-button": {
-        "displayName": "Widget Button",
-        "purpose": "Widget button labels, 14px; uppercase tracked."
-      },
-      "hpq-fine": {
-        "displayName": "Widget Fine Print",
-        "purpose": "Service area, hours, fallbacks, errors, status; 14px centered muted."
+        "purpose": "Embed code panels."
       }
     },
+    "widgetTokens": {
+      "scope": "#hpq-block (between HPQ:BEGIN and HPQ:END); self-contained, never reads :root.",
+      "map": {
+        "--hpq-accent": "gold",
+        "--hpq-accent-2": "gold-2",
+        "--hpq-ink": "ink",
+        "--hpq-text": "body",
+        "--hpq-muted": "soft",
+        "--hpq-field": "paper",
+        "--hpq-bg": "card",
+        "--hpq-focus": "blue",
+        "--hpq-error": "error",
+        "--hpq-display": "typography.display.fontFamily",
+        "--hpq-font": "typography.body.fontFamily"
+      },
+      "literals": {
+        "placeholder": "#5f6b80",
+        "selectedChipDate": "#dbe4f5",
+        "cardRadius": "24px",
+        "fieldRadius": "10px",
+        "pill": "999px"
+      }
+    },
+    "textures": [
+      {
+        "name": "diagonal-lines",
+        "value": "repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)",
+        "purpose": "Deep navy bands, footer and hero ground. Owner-sanctioned (calm band style); keep at 3.5% white or fainter."
+      }
+    ],
+    "overlays": [
+      {
+        "name": "hero-photo-overlay",
+        "value": "linear-gradient(180deg,rgba(8,31,77,.80),rgba(8,31,77,.86) 60%,rgba(8,31,77,.92))",
+        "purpose": "Deep navy over the owner's house photo so white H1 holds 4.5:1."
+      }
+    ],
     "shadows": [
       {
-        "name": "hero-lift",
-        "value": "0 20px 40px -22px rgba(3,43,116,.45), 0 4px 12px rgba(3,43,116,.12)",
-        "purpose": "Wash canvas, all widths."
+        "name": "float-lift",
+        "value": "0 10px 28px rgba(8,31,77,.3)",
+        "purpose": "Floating text circle only."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-light",
+        "value": "3px solid #0d57db, offset 3px",
+        "purpose": "Page focus on light grounds."
       },
       {
-        "name": "floating-bubble",
-        "value": "0 14px 30px -16px rgba(3,43,116,.55), 0 3px 10px rgba(3,43,116,.14)",
-        "purpose": "Example text bubble over the photo."
+        "name": "focus-dark",
+        "value": "3px solid #f0c24b, offset 3px",
+        "purpose": "Focus on navy, deep, hero and footer."
       },
       {
-        "name": "device",
-        "value": "0 30px 60px -30px rgba(3,43,116,.5), 0 6px 18px rgba(3,43,116,.1)",
-        "purpose": "Phone preview mock."
-      },
-      {
-        "name": "pill-hint",
-        "value": "0 6px 16px -6px rgba(3,43,116,.35)",
-        "purpose": "Wash hint pill (\"Swipe to wash it\" / \"Drag to wash it\")."
-      },
-      {
-        "name": "hpq-card",
-        "value": "0 18px 40px -26px rgba(27,27,27,.35)",
-        "purpose": "Widget card; neutral so it sits on any host ground."
-      },
-      {
-        "name": "hpq-focus-glow",
-        "value": "0 0 0 3px rgba(13,87,219,.22)",
-        "purpose": "Widget field focus (hover uses the lighter 0 0 0 3px rgba(13,87,219,.12))."
-      },
-      {
-        "name": "hpq-hover-ring",
-        "value": "0 0 0 3px rgba(13,87,219,.12)",
-        "purpose": "Widget input/select/textarea hover (hover-capable pointers), with accent border."
-      },
-      {
-        "name": "focus-ring",
-        "value": "outline: 3px solid #7aa7f7; outline-offset: 2px; border-radius: 6px",
-        "purpose": "Global page :focus-visible ring."
-      },
-      {
-        "name": "hpq-hover-outline",
-        "value": "outline: 2px solid rgba(13,87,219,.45); outline-offset: 2px",
-        "purpose": "Widget button and text-link hover (hover-capable pointers)."
+        "name": "widget-outline",
+        "value": "2px solid #0d57db, offset 2px",
+        "purpose": "Widget buttons and link on hover and focus."
       }
     ],
     "motion": [
       {
-        "name": "ease-out-soft",
-        "value": "cubic-bezier(.2,.8,.2,1)",
-        "purpose": "Page button press (.2s) and hint exit (.5s)."
+        "name": "letter-bounce",
+        "value": "1s cubic-bezier(.34,1.56,.64,1), 20ms stagger, from opacity 0 translateX(50px)",
+        "purpose": "Hero H1 letters only. Owner-sanctioned overshoot. Off under reduced motion and without JS."
       },
       {
-        "name": "hpq-state",
-        "value": ".15s",
-        "purpose": "Only motion allowed in the widget: border, background, color, press scale .98."
+        "name": "fade-up",
+        "value": "opacity and translateY(12px), .4s ease-out",
+        "purpose": "Below-the-fold elements on intersection only."
       },
       {
-        "name": "BRUSH",
-        "value": "0.075",
-        "purpose": "Wash brush radius as share of canvas width."
+        "name": "float-slide",
+        "value": "transform .35s cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Floating text circle in/out."
       },
       {
-        "name": "BRUSH_STRENGTH",
-        "value": "0.55",
-        "purpose": "Clean per pass; two passes about spotless."
-      },
-      {
-        "name": "REGRIME_EVERY",
-        "value": "30 frames",
-        "purpose": "Frames between re-dirtying steps."
-      },
-      {
-        "name": "REGRIME_ALPHA",
-        "value": "0.02",
-        "purpose": "Grime returned per step (~17s half-life)."
-      },
-      {
-        "name": "IDLE_AFTER",
-        "value": "2200ms",
-        "purpose": "Idle time before the auto wand runs."
-      },
-      {
-        "name": "WAND_SPEED",
-        "value": "1.0",
-        "purpose": "Auto wand speed multiplier (washes at 70% strength)."
-      },
-      {
-        "name": "SPRAY_PER_FRAME",
-        "value": "7",
-        "purpose": "Droplets per frame while washing; halved under 520px; cap 600."
+        "name": "state",
+        "value": ".15s to .2s on background, border and colour; press scale(.98) over .12s",
+        "purpose": "Buttons, fields, chips."
       }
     ],
     "breakpoints": [
       {
-        "name": "phone (base)",
-        "value": "360-430px",
-        "purpose": "Unqualified CSS is the phone layout."
+        "name": "widget",
+        "value": "481px"
       },
       {
-        "name": "page-tablet",
-        "value": "min-width: 600px"
+        "name": "md",
+        "value": "760px"
       },
       {
-        "name": "page-desktop",
-        "value": "min-width: 900px"
-      },
-      {
-        "name": "hpq-wide",
-        "value": "min-width: 481px",
-        "purpose": "Widget only; phone-first base below it."
-      },
-      {
-        "name": "wash-spray-small",
-        "value": "max-width: 520px",
-        "purpose": "Script-only: halves spray density."
+        "name": "lg",
+        "value": "1024px"
       }
     ],
-    "grimePalette": {
-      "note": "Canvas-only depicted dirt; never CSS, never UI color.",
-      "base": "rgba(92,88,70,.82)",
-      "blotchTones": [
-        "rgb(70,78,46)",
-        "rgb(112,108,84)",
-        "rgb(52,58,40)",
-        "rgb(124,126,92)",
-        "rgb(96,84,58)"
+    "mimicry": {
+      "scope": "Phone preview (.phone) only: copies iOS Messages, not part of the system.",
+      "colors": [
+        "#dfe5f0",
+        "#f6f7f9",
+        "#e9ecf1",
+        "#68717f",
+        "#5a616d",
+        "#222222",
+        "#e9e9eb",
+        "#111111"
       ],
-      "dripStreak": "rgb(44,50,32) at .12-.32 alpha",
-      "speckles": [
-        "rgba(40,44,30,.35)",
-        "rgba(150,150,120,.22)"
+      "radii": [
+        "44px",
+        "34px",
+        "18px 18px 18px 6px"
       ],
-      "spray": [
-        "#ffffff",
-        "#e9f3ff"
+      "fontSizes": [
+        "11px",
+        "13px",
+        "13.5px",
+        "17px"
       ]
     },
-    "mimicry": {
-      "note": "Messaging-app mimicry in the phone preview and example bubble; copies the phone Messages app, not this palette. Do not reuse in page or widget UI. Shared grey #5a616d covers the contact sub-line (11px), example label, timestamp (11px) and bubble placeholder.",
-      "colors": {
-        "received-bubble": "#e9e9eb",
-        "bubble-text": "#111111",
-        "bubble-placeholder": "#5a616d",
-        "thread-header": "#f6f7f9",
-        "thread-rule": "#e9ecf1",
-        "contact-name": "#222222",
-        "secondary-grey": "#5a616d",
-        "timestamp": "#5a616d",
-        "avatar": "#68717f",
-        "device-bezel": "#dfe6f1"
+    "sanctioned": [
+      {
+        "device": "Eyebrow pills",
+        "by": "Ellie (calm-photo-style.md, 2026-10-19)",
+        "detectorRules": [
+          "hero-eyebrow-chip",
+          "kicker-above-heading"
+        ]
       },
-      "shapes": {
-        "bubble-tail": "16px 16px 16px 6px (example, phone); 18px 18px 18px 6px (example from 900px, preview bubble)",
-        "device": "44px outer, 34px screen"
+      {
+        "device": "Hero H1 bounce-in easing cubic-bezier(.34,1.56,.64,1)",
+        "by": "Ellie (calm-photo-style.md, 2026-10-19)",
+        "detectorRules": [
+          "bounce-easing"
+        ]
+      },
+      {
+        "device": "Diagonal line texture on deep bands",
+        "by": "Ellie (calm-photo-style.md, 2026-10-19)",
+        "detectorRules": [
+          "repeating-stripes-gradient"
+        ]
+      },
+      {
+        "device": "Phone-mock greys and radii",
+        "by": "Ellie (mimicry of iOS Messages)",
+        "detectorRules": [
+          "design-system-color",
+          "design-system-radius",
+          "design-system-font-size"
+        ]
       }
-    },
-    "wash": {
-      "touchAction": "none",
-      "note": "Drag washes in every direction; the page scrolls outside the photo. html carries overscroll-behavior-y:none to stop pull-to-refresh. Text selection and touch callout disabled on the frame."
-    }
+    ]
   },
   "components": [
     {
-      "name": "Page Primary Button",
+      "name": "Primary Pill Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Filled pill CTA on the demo page; always paired with a ghost button.",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Try the widget</a>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid #0d57db;font:700 14px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:#0d57db;color:#fff} @media (hover:hover){.ds-btn-primary:hover{background:#073fa3;border-color:#073fa3}} .ds-btn-primary:active{transform:scale(.97)} .ds-btn-primary:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
+      "description": "Gold fill, ink text; the one main action per view.",
+      "html": "<button class=\"ds-btn-primary\">Try the quote form</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border-radius:999px;border:2px solid #f0c24b;background:#f0c24b;color:#0b2457;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;cursor:pointer;transition:background-color .2s,border-color .2s,transform .12s}.ds-btn-primary:hover{background:#f6d272;border-color:#f6d272}.ds-btn-primary:active{transform:scale(.98)}.ds-btn-primary:focus-visible{outline:3px solid #0d57db;outline-offset:3px}"
     },
     {
-      "name": "Page Ghost Button",
+      "name": "Ghost Pill Button (on dark)",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Outlined pill, the second half of every button pair.",
-      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the embed code</a>",
-      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid #0d57db;font:700 14px/1 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.8,.2,1);background:transparent;color:#0d57db} @media (hover:hover){.ds-btn-ghost:hover{background:#e8f0fd}} .ds-btn-ghost:active{transform:scale(.97)} .ds-btn-ghost:focus-visible{outline:3px solid #7aa7f7;outline-offset:2px}"
+      "description": "Secondary action on navy bands.",
+      "html": "<div style=\"background:#0a3d99;padding:24px\"><button class=\"ds-btn-ghost\">See how to add it</button></div>",
+      "css": ".ds-btn-ghost{min-height:56px;padding:0 26px;border-radius:999px;border:2px solid rgba(244,247,252,.7);background:transparent;color:#f4f7fc;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;cursor:pointer;transition:background-color .2s,border-color .2s}.ds-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}.ds-btn-ghost:focus-visible{outline:3px solid #f0c24b;outline-offset:3px}"
     },
     {
-      "name": "Embed Card",
-      "kind": "card",
-      "refersTo": "card-way-phone",
-      "description": "Flat paper card with a hairline; 22px/18px padding on phones, 28px from 600px.",
-      "html": "<div class=\"ds-way\"><h3>Paste it in<span class=\"ds-best\">Easiest</span></h3><ol><li>Click Copy widget code.</li><li>In GoDaddy: Edit Website, Add Section, HTML.</li></ol><pre class=\"ds-pre\">&lt;div id=\"hpq-block\"&gt;…&lt;/div&gt;</pre></div>",
-      "css": ".ds-way{background:#fff;border:1px solid #dfe4ec;border-radius:16px;padding:22px 18px;font:16px/1.55 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#1f2733} .ds-way h3{margin:0 0 6px;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:#032b74} .ds-best{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:#e8f0fd;color:#0d57db;font-size:11px;letter-spacing:.08em;vertical-align:3px} .ds-way ol{margin:12px 0 20px;padding-left:20px;color:#4a5463} .ds-pre{margin:0;padding:14px;border-radius:12px;background:#eef3fb;color:#032b74;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap}"
-    },
-    {
-      "name": "Top Bar",
-      "kind": "nav",
-      "description": "Paper bar with hairline, logo left, phone number tel: link right; 58px on phones, 72px from 600px (number 16px then 17px).",
-      "html": "<header class=\"ds-top\"><b class=\"ds-logo\">HYDRO-PRO</b><a class=\"ds-tel\" href=\"tel:+10000000000\">(000) 000-0000</a></header>",
-      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:0 20px;background:#fff;border-bottom:1px solid #dfe4ec;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-logo{color:#0d57db;font-weight:800;font-size:20px} .ds-tel{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;font-weight:700;font-size:16px;color:#032b74;text-decoration:none;white-space:nowrap} .ds-tel:hover{color:#0d57db;text-decoration:underline}",
-      "refersTo": "top-bar-phone"
-    },
-    {
-      "name": "Widget Card (phone)",
-      "kind": "card",
-      "refersTo": "hpq-card-phone",
-      "description": "Widget shell at phone width: 14px radius, 22px/18px padding; 16px and 28px from 481px.",
-      "html": "<div class=\"ds-hpq-card\"><h2>Get a fast quote</h2><p>We text you back the same day.</p></div>",
-      "css": ".ds-hpq-card{max-width:360px;padding:22px 18px;background:#fff;border:1px solid #dadada;border-radius:14px;box-shadow:0 18px 40px -26px rgba(27,27,27,.35);font:16px/1.5 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#303030} .ds-hpq-card h2{margin:0 0 4px;font:700 24px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:0;text-transform:none} .ds-hpq-card p{margin:0;font-size:15px;color:#5e5e5e}"
-    },
-    {
-      "name": "Widget Send Button",
+      "name": "Line Pill Button (on light)",
       "kind": "button",
-      "refersTo": "hpq-send",
-      "description": "Full-width filled pill that opens the prefilled SMS.",
-      "html": "<button class=\"ds-hpq-send\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z\"/></svg>Text my quote request</button>",
-      "css": ".ds-hpq-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 14px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:#0d57db;color:#fff} @media (hover:hover){.ds-hpq-send:hover{outline:2px solid rgba(13,87,219,.45);outline-offset:2px;background:#073fa3;border-color:#073fa3}} .ds-hpq-send:active{transform:scale(.98)} .ds-hpq-send:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
+      "refersTo": "button-line",
+      "description": "Secondary action on paper or white.",
+      "html": "<button class=\"ds-btn-line\">Copy frame code</button>",
+      "css": ".ds-btn-line{min-height:56px;padding:0 26px;border-radius:999px;border:2px solid #0b2457;background:transparent;color:#0b2457;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;cursor:pointer}.ds-btn-line:hover{background:rgba(11,36,87,.06)}.ds-btn-line:focus-visible{outline:3px solid #0d57db;outline-offset:3px}"
     },
     {
-      "name": "Widget Alt Button",
-      "kind": "button",
-      "refersTo": "hpq-alt",
-      "description": "Outlined pill fallback (\"Text us instead\", \"Copy the message\").",
-      "html": "<a class=\"ds-hpq-alt\" href=\"#\">Text us instead</a>",
-      "css": ".ds-hpq-alt{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:0 20px;border:2px solid #0d57db;border-radius:999px;font:700 14px/1.2 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,transform .15s;background:transparent;color:#0d57db;text-decoration:none} @media (hover:hover){.ds-hpq-alt:hover{outline:2px solid rgba(13,87,219,.45);outline-offset:2px;background:rgba(13,87,219,.07)}} .ds-hpq-alt:active{transform:scale(.98)} .ds-hpq-alt:focus-visible{outline:3px solid rgba(13,87,219,.4);outline-offset:2px}"
-    },
-    {
-      "name": "Widget Field",
-      "kind": "input",
-      "refersTo": "hpq-input",
-      "description": "Tracked uppercase label over a 48px field; blue border with a 12% ring on hover, 22% glow on focus, red on error.",
-      "html": "<div class=\"ds-hpq-f\"><label for=\"ds-addr\">Address of the job</label><input id=\"ds-addr\" class=\"ds-hpq-input\" placeholder=\"Street, town\"></div>",
-      "css": ".ds-hpq-f{font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#303030} .ds-hpq-f label{display:block;margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase} .ds-hpq-input{display:block;width:100%;min-height:48px;padding:11px 14px;border:1px solid #949494;border-radius:10px;background:#fff;color:#303030;font:16px/1.4 \"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;transition:border-color .15s,box-shadow .15s} .ds-hpq-input::placeholder{color:#767676} @media (hover:hover){.ds-hpq-input:hover{border-color:#0d57db;box-shadow:0 0 0 3px rgba(13,87,219,.12)}} .ds-hpq-input:focus{outline:none;border-color:#0d57db;box-shadow:0 0 0 3px rgba(13,87,219,.22)} .ds-hpq-input[aria-invalid=\"true\"]{border-color:#b42318}"
-    },
-    {
-      "name": "Widget Day Chips",
+      "name": "Eyebrow Pill (sanctioned)",
       "kind": "chip",
-      "refersTo": "hpq-day",
-      "description": "Radio tiles for preferred day: weekday over date, selected fills blue.",
-      "html": "<div class=\"ds-days\"><label class=\"ds-day\"><input type=\"radio\" name=\"dsd\" checked><span>Flexible<small>any day</small></span></label><label class=\"ds-day\"><input type=\"radio\" name=\"dsd\"><span>Mon<small>Oct 12</small></span></label><label class=\"ds-day\"><input type=\"radio\" name=\"dsd\"><span>Tue<small>Oct 13</small></span></label></div>",
-      "css": ".ds-days{display:flex;flex-wrap:wrap;gap:8px;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#303030} .ds-day{position:relative;flex:1 1 0;min-width:64px} .ds-day input{position:absolute;opacity:0;width:1px;height:1px} .ds-day span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:52px;padding:6px 12px;border:1px solid #949494;border-radius:10px;font-size:14px;font-weight:600;line-height:1.15;cursor:pointer;transition:background .15s,border-color .15s,color .15s} .ds-day small{font-size:12px;font-weight:400;color:#5e5e5e} .ds-day span:hover{border-color:#0d57db} .ds-day input:checked+span{background:#0d57db;border-color:#0d57db;color:#fff} .ds-day input:checked+span small{color:#dbe7ff} .ds-day input:focus-visible+span{box-shadow:0 0 0 3px rgba(13,87,219,.3)}"
+      "refersTo": "eyebrow",
+      "description": "Quiet label above a few key headings; owner-sanctioned. Not a button: no hover, arrow or shadow.",
+      "html": "<p class=\"ds-eyebrow\">Free estimates, by text</p>",
+      "css": ".ds-eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0;padding:9px 14px;border-radius:999px;background:rgba(11,36,87,.06);color:#0b2457;font:500 14px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;letter-spacing:.02em}.ds-eyebrow::before{content:\"\";width:7px;height:7px;border-radius:50%;background:#f0c24b}"
     },
     {
-      "name": "Wash Canvas",
+      "name": "Tinted Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Borderless paper-tinted input with a Cal Sans label; blue outline on hover/focus.",
+      "html": "<label class=\"ds-label\" for=\"ds-n\">Your name</label><input id=\"ds-n\" class=\"ds-field\" placeholder=\"Street, town\">",
+      "css": ".ds-label{display:block;margin:0 0 8px;font:400 17px/1.2 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#0b2457}.ds-field{display:block;width:100%;min-height:52px;padding:13px 14px;border:2px solid transparent;border-radius:10px;background:#f4f6fb;color:#0b2457;font:16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;outline:none;transition:border-color .15s}.ds-field::placeholder{color:#5f6b80}.ds-field:hover,.ds-field:focus{border-color:#0d57db}"
+    },
+    {
+      "name": "Day Chip",
+      "kind": "chip",
+      "refersTo": "day-chip",
+      "description": "Widget preferred-day radio as a pill; selected fills ink.",
+      "html": "<div class=\"ds-days\"><button class=\"ds-day on\">Flexible<small>any day</small></button><button class=\"ds-day\">Tue<small>Oct 20</small></button></div>",
+      "css": ".ds-days{display:flex;gap:8px}.ds-day{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:96px;min-height:54px;padding:6px 10px;border:2px solid transparent;border-radius:999px;background:#f4f6fb;color:#0b2457;font:600 15px/1.15 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;cursor:pointer}.ds-day small{font-size:13px;font-weight:400;color:#4a5870}.ds-day.on{background:#0b2457;color:#fff}.ds-day.on small{color:#dbe4f5}.ds-day:hover,.ds-day:focus-visible{border-color:#0d57db;outline:none}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "24px white card on paper; no border, no shadow.",
+      "html": "<div style=\"background:#f4f6fb;padding:24px\"><div class=\"ds-card\"><h3>Paste it in</h3><p>Two ways into the GoDaddy site you already have.</p></div></div>",
+      "css": ".ds-card{background:#fff;border-radius:24px;padding:24px 20px;color:#2a3a4f;font:16px/1.7 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif}.ds-card h3{margin:0 0 8px;font:400 24px/1.08 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#0b2457}.ds-card p{margin:0}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "description": "Slim paper header: logo left, Cal Sans tap-to-call right.",
+      "html": "<header class=\"ds-top\"><strong>Hydro-Pro</strong><a href=\"#\">(732) 288-5941</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:0 20px;background:#f4f6fb;color:#0b2457;font:400 17px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif}.ds-top a{color:#0b2457;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}.ds-top a:hover{color:#85601a}"
+    },
+    {
+      "name": "Textured Deep Band with Steps",
       "kind": "custom",
-      "description": "Signature: the owner's photo under olive grime with a clean diagonal stripe; 16:10 / 18px on phones (shown), 4:3 / 22px from 600px. Static snapshot.",
-      "html": "<div class=\"ds-wash\"><div class=\"ds-grime\"></div><span class=\"ds-hint\">Swipe to wash it</span></div>",
-      "css": ".ds-wash{position:relative;aspect-ratio:16/10;max-width:400px;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#cfe0f5,#f4f7fb 60%,#c9d3c0),#6b7458;box-shadow:0 20px 40px -22px rgba(3,43,116,.45),0 4px 12px rgba(3,43,116,.12);touch-action:none;cursor:crosshair;user-select:none;-webkit-user-select:none;font-family:\"Open Sans\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-grime{position:absolute;inset:0;background:rgba(92,88,70,.82);-webkit-mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%);mask:linear-gradient(28deg,#000 38%,transparent 39%,transparent 55%,#000 56%)} .ds-hint{position:absolute;left:10px;top:10px;padding:8px 13px 8px 11px;border-radius:999px;background:rgba(255,255,255,.92);color:#032b74;font-size:13px;font-weight:700;letter-spacing:.02em;box-shadow:0 6px 16px -6px rgba(3,43,116,.35)}",
-      "refersTo": "wash-phone"
+      "refersTo": "step-number",
+      "description": "Deep navy band with the 135deg line texture, gold numbered discs.",
+      "html": "<div class=\"ds-deep\"><h2>How it <span>works.</span></h2><div class=\"ds-step\"><i>1</i><b>A customer picks the job.</b></div></div>",
+      "css": ".ds-deep{background-color:#081f4d;background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px);color:#cbd8ee;padding:40px 20px}.ds-deep h2{margin:0 0 20px;font:400 36px/1.08 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#f4f7fc}.ds-deep h2 span{color:#f0c24b}.ds-step{display:flex;gap:16px;align-items:center}.ds-step i{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#f0c24b;color:#0b2457;font:normal 400 20px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif}.ds-step b{font:400 21px/1.2 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#f4f7fc}"
+    },
+    {
+      "name": "Floating Text Circle",
+      "kind": "custom",
+      "refersTo": "float-circle",
+      "description": "60px gold circle opening sms:; shown after the hero, hidden while the form is in view.",
+      "html": "<a class=\"ds-float\" href=\"#\" aria-label=\"Text Hydro-Pro\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\"><path d=\"M4 5h16v11H9l-5 4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-float{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#f0c24b;color:#0b2457;box-shadow:0 10px 28px rgba(8,31,77,.3)}.ds-float:focus-visible{outline:3px solid #0d57db;outline-offset:3px}"
     }
   ],
   "narrative": {
-    "northStar": "The Clean Stripe",
-    "overview": "**Creative North Star: \"The Clean Stripe\"**\n\nTwo systems share one file and must stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is a guest on someone else's website: it borrows hydropronj.com's language (their blue, a white card, pill buttons, uppercase tracked labels, Open Sans when the host has it) and adds nothing of its own. It is neutral and still, so it reads as if it was always part of their GoDaddy site. The **demo page** around it is the pitch to the owner: the same blue, pushed louder, with heavy uppercase headlines and one physical idea from the trade, a grimy surface coming clean under a pressure-wash stripe, on the owner's own hero photo.\n\nBoth systems are built phone first. The base styles are the 360–430px layout and every larger size is an adaptation layered on top, because the owner will open the pitch on a phone and his customers will fill the widget on one. Phone values in this file are the primary steps of each scale; tablet and desktop values come second.\n\nThe page is light and cool throughout: a pale blue-white ground, white panels, deep navy for headings and the footer. Depth is soft and blue-tinted. Every bit of motion on the page lives in the wash; the widget only changes state.",
+    "northStar": "Calm Bands in Their Own Colours",
+    "overview": "The page is Ellie's calm band style (house default since 2026-10-19, after lpmr.co.uk) coloured from the Hydro-Pro logo: full-bleed bands that alternate off-white paper, logo navy and a deeper navy with a faint diagonal line texture, so each new section is obvious without rules or dividers. One warm accent, the logo's gold, is used as a fill: buttons, step numbers, the floating text circle, the eyebrow dot. Everything is soft and borderless: 24px white cards, full pill buttons, tinted 10px fields.\n\nTwo systems share `index.html` and stay separate. The **widget** (`#hpq-block`, between `HPQ:BEGIN` and `HPQ:END`) is pasted into the owner's GoDaddy site or iframed, so it carries its own `--hpq-*` tokens, its own fonts declaration and its own `<style>`; it never reads a page variable. The **page** around it uses the `:root` tokens. Both draw the same values, so they read as one brand.\n\nMotion is limited to two moments: the hero H1 letters bounce in once, and content below the first screen fades up 12px. Everything is visible at rest, without JS and under reduced motion. The phone mock in the \"What lands on your phone\" preview copies iOS Messages greys; those belong to the imitation, not to this system.",
     "keyCharacteristics": [
-      "Phone first: base CSS is the phone layout; `min-width` queries adapt up.",
-      "One hue (Hydro-Pro blue `#0d57db`) across both systems; everything else is neutral.",
-      "Pill buttons in matched pairs: filled primary, outlined ghost, same 56px height, same 2px outline.",
-      "Uppercase tracked labels name fields, buttons and panels.",
-      "Page headlines shout (800, uppercase, tight tracking); widget headings stay sentence case.",
-      "Ground is never black.",
-      "Signature: the wash canvas, the owner's photo under generated grime, washed by drag or by an idle wand."
+      "Paper, navy, paper, deep navy, navy, deep navy: alternating full-bleed bands.",
+      "Logo gold as fill only; deeper gold ink when gold must be text on light.",
+      "Cal Sans display at weight 400 for every heading, label and button; system stack for running text.",
+      "24px cards, 999px pills, 10px tinted borderless fields; no strokes at rest.",
+      "Site blue reserved for hover and focus outlines on light grounds.",
+      "One bounce-in (hero H1), one 12px fade-up, one floating 60px text circle."
     ],
     "rules": [
       {
-        "name": "The Never-Black Ground Rule",
-        "body": "The page ground is never black. Body sits on `ground`, bands on `paper`; the darkest surface anywhere is Harbor Navy in the footer. No `#000` or near-black section, card, or overlay; even the wash canvas fallback is grime olive, not black.",
+        "name": "The Gold Is a Fill Rule",
+        "body": "Gold never sets text on a light ground; use Gold Ink there. On gold, text is Hydro Ink, never white.",
         "section": "colors"
       },
       {
-        "name": "The One Blue Rule",
-        "body": "Blue is the only hue in either system. The page climbs a three-step ladder (blue at rest, pressed blue on hover, navy for type and the footer); the widget uses only the first two. No second accent. Grime olive and messaging greys are depicted materials, not accents.",
+        "name": "The Blue Is an Outline Rule",
+        "body": "Site Blue appears only as a 2–3px hover or focus outline (and the caret). On dark bands the focus outline switches to gold.",
         "section": "colors"
       },
       {
-        "name": "The Host Palette Rule",
-        "body": "Widget colors come only from `--hpq-*` variables declared on `#hpq-block`. No demo-page token (`--blue`, `--ink`, `--ground`) is ever referenced inside the block, so pasting it into GoDaddy carries everything it needs and nothing else.",
+        "name": "The Two Token Sets Rule",
+        "body": "Widget colours live in `--hpq-*` on `#hpq-block` (accent, accent-2, ink, text, muted, field, bg, focus, error) and duplicate the page values by hand. Never make the widget read a `:root` variable; it must survive being pasted alone.",
         "section": "colors"
       },
       {
-        "name": "The Two Voices Rule",
-        "body": "Page headings are 800 uppercase with negative tracking; widget headings are 700 sentence case with zero tracking and explicitly reset `text-transform`. A widget heading that shouts would fight the host site's own headings.",
+        "name": "The Regular Display Rule",
+        "body": "Cal Sans is always weight 400 with -0.005em tracking and `text-wrap: balance` on headings. No uppercase, no bold display.",
         "section": "typography"
       },
       {
-        "name": "The Labels Label Rule",
-        "body": "Tracked uppercase small text always names something concrete: a field, a button, a panel, a chip, a footer business name. It never sits above a headline as a kicker.",
+        "name": "The Place in the H1 Rule",
+        "body": "The hero H1 names the town; its last phrase is the gold accent.",
         "section": "typography"
       },
       {
-        "name": "The Thumb-Size Text Rule",
-        "body": "Interactive text is 14px or larger on phones: button labels, fine print, links and status lines. Only labels that name a field (12px) and messaging-app mimicry go smaller.",
-        "section": "typography"
-      },
-      {
-        "name": "The Phone Is The Base Rule",
-        "body": "Write the phone layout as the unqualified CSS and adapt upward with `min-width` queries. A desktop rule undone by a `max-width` query is a regression.",
-        "section": "layout"
-      },
-      {
-        "name": "The Tinted Lift Rule",
-        "body": "Page shadows are navy-tinted, negatively spread, and reserved for things that float over or above the page (the photo, the bubble, the phone). Cards and sections use hairlines.",
+        "name": "The No Stroke at Rest Rule",
+        "body": "Cards, fields and chips carry no border at rest; a transparent 2px border exists only so hover, focus and error can colour it without layout shift.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** write phone styles as the base and adapt up with `min-width` (600px, 900px; 481px inside the widget).",
-      "**Do** keep the page ground at Mist Ground and the darkest surface at Harbor Navy; the ground is never black.",
-      "**Do** scope every widget selector under `#hpq-block` and route every widget color through a `--hpq-*` variable, so a restyle is a variable edit.",
-      "**Do** ship buttons as pairs: same 56px height, same 2px outline, filled primary beside outlined ghost.",
-      "**Do** gate hover styles behind `@media (hover:hover)`.",
-      "**Do** set page headings in 800 uppercase with negative tracking and widget headings in 700 sentence case.",
-      "**Do** keep widget field text at 16px or larger and interactive text at 14px or larger.",
-      "**Do** tint page shadows navy with negative spread, and only on elements that float.",
-      "**Do** run the wash over the client's own photo and tune it through the named constants, not by editing the loop.",
-      "**Do** keep field strokes at 3:1 or better against the card; the shipped `hpq-line` sits at that floor, so don't lighten it."
+      "**Do** alternate full-bleed bands (paper, navy, deep navy with the line texture) so each section is obvious.",
+      "**Do** use gold as a fill with ink text, and Gold Ink when gold must be text on light.",
+      "**Do** keep every interactive target 44px or more, every input 16px or more.",
+      "**Do** keep the widget self-contained: its own `--hpq-*` tokens, `@import` for Cal Sans and system fallbacks, no page variables.",
+      "**Do** keep the line texture at 3.5% white or fainter.",
+      "**Do** keep motion to the hero bounce-in and the 12px fade-up, and keep everything visible under reduced motion and without JS."
     ],
     "donts": [
-      "**Don't** put a black or near-black ground behind any section, card, or overlay.",
-      "**Don't** animate anything inside the widget beyond 0.15s state transitions and the press scale; all motion belongs to the demo page.",
-      "**Don't** reference demo-page tokens or load fonts or assets from inside `#hpq-block`; it must paste into GoDaddy whole.",
-      "**Don't** add a second accent hue to either system, and don't borrow the grime olives or the messaging greys as UI color.",
-      "**Don't** place a tracked uppercase line above a headline as a kicker; tracked labels name things.",
-      "**Don't** use grey or black drop shadows on the page, or hard offset shadows anywhere.",
-      "**Don't** run the wash over stock or generated house imagery."
+      "**Don't** put white text on gold or gold text on paper.",
+      "**Don't** use Site Blue as a fill or a second accent.",
+      "**Don't** give the letter bounce to any heading but the hero H1.",
+      "**Don't** add borders or shadows to cards, fields or chips at rest.",
+      "**Don't** make an eyebrow look like a button (arrow, hover, shadow, solid gold) or put one above every heading.",
+      "**Don't** use the phone mock's greys or radii anywhere outside the mock.",
+      "**Don't** use a black ground anywhere."
     ]
   }
 }
